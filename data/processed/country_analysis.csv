@@ -1,0 +1,5 @@
+country,total_revenue,avg_revenue,num_partners,avg_fit_score,high_priority_count
+AU,9600000.0,9600000.0,1,8.0,1
+SA,1400000.0,1400000.0,1,3.0,0
+UK,3300000.0,3300000.0,1,3.0,0
+US,26520000.0,13260000.0,2,5.5,1
