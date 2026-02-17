@@ -9,13 +9,20 @@ import joblib
 def train_model():
     # Load enriched dataset
     df = pd.read_csv('data/processed/partners_enriched.csv')
-    
+
+    # Preserve location_city ONLY if it exists
+    if 'location_city' in df.columns:
+        city_map = df[['name', 'location_city']].copy()
+    else:
+        city_map = None
+        print("⚠️ Warning: 'location_city' not found in partners_enriched.csv")
+
     # Create success target
     df['success'] = (
         (df['kaycore_fit_score'] >= 7) &
         (df['revenue_usd'] >= 300000)
     ).astype(int)
-    
+
     # Features for model
     features = [
         'employees',
@@ -23,24 +30,24 @@ def train_model():
         'revenue_usd',
         'kaycore_fit_score'
     ]
-    
+
     X = df[features]
     y = df['success']
-    
+
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
-    
+
     # Train model
     model = RandomForestClassifier()
     model.fit(X_train, y_train)
-    
+
     # Evaluate model
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
     print("Model Accuracy:", acc)
-    
+
     # Save model
     joblib.dump(model, 'data/models/rf_model.pkl')
     print("Model saved successfully!")
@@ -59,10 +66,57 @@ def train_model():
     df['cluster'] = kmeans.fit_predict(cluster_features)
 
     # -----------------------------------
+    # RESTORE location_city IF POSSIBLE
+    # -----------------------------------
+    if city_map is not None:
+        df = df.merge(city_map, on='name', how='left')
+        print("location_city restored successfully!")
+    else:
+        print("location_city could not be restored (column missing).")
+
+    # -----------------------------------
     # SAVE FINAL DATASET FOR DAY 4
     # -----------------------------------
     df.to_csv('data/processed/partners_with_clusters.csv', index=False)
     print("partners_with_clusters.csv created successfully!")
+
+
+class PartnershipMLModels:
+    def __init__(self):
+        # Load trained model (this file exists)
+        self.rf_model = joblib.load('data/models/rf_model.pkl')
+
+        # You don't have these yet, so disable them
+        self.scaler = None
+        self.kmeans_model = None
+
+        self.feature_cols = [
+            'employees',
+            'clutch_rating',
+            'revenue_usd',
+            'kaycore_fit_score'
+        ]
+
+    def predict_new_partner(self, partner_dict):
+        df = pd.DataFrame([partner_dict])
+
+        # No scaler yet
+        scaled = df[self.feature_cols]
+
+        # Predict success probability
+        success_prob = self.rf_model.predict_proba(scaled)[0][1]
+
+        # Simple revenue estimate
+        predicted_revenue = df['revenue_usd'].iloc[0]
+
+        # No kmeans yet
+        cluster = 0
+
+        return {
+            'success_probability': success_prob,
+            'predicted_revenue_usd': predicted_revenue,
+            'cluster': int(cluster)
+        }
 
 
 if __name__ == "__main__":
