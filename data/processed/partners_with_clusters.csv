@@ -1,6 +1,654 @@
-name,country,employees,clutch_rating,min_project_size_usd,is_wp_specialist,revenue_usd,kaycore_fit_score,partnership_priority,success,cluster
-Agency A,US,50,4.6,20000,True,7800000.0,8,High,1,2
-Agency B,UK,30,4.2,10000,False,3300000.0,3,Medium,0,0
-Agency C,SA,20,3.9,5000,True,1400000.0,3,Medium,0,0
-Agency D,AU,80,4.8,30000,True,9600000.0,8,High,1,3
-Agency E,US,120,4.7,50000,False,18720000.0,3,Medium,0,1
+name,country,location_city,website,employees,revenue_usd,clutch_rating,min_project_size_usd,is_wp_specialist,kaycore_fit_score,partnership_priority,web_pct,mobile_pct,custom_pct,cluster
+Imaginovation,US,"Raleigh, NC",https://imaginovation.net/custom-web-mobile-app-development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.915,75000,False,5,Medium,25.0,25.0,0.0,1
+ChopDawg.com,US,"Boston, MA",https://www.chopdawg.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferrall%26utm_campaign%3Dus-web-developers,29,4524000.0,4.8105,1000,False,5,Medium,20.0,80.0,0.0,0
+Plego,US,"Chicago, IL",https://www.plego.com/clutch-landing-page/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.026,25000,False,5,Medium,20.0,10.0,0.0,1
+Utility,US,"Culver City, CA",https://utility.agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.826,50000,False,5,Medium,10.0,50.0,10.0,0
+3 Media Web,US,"Marlborough, MA",https://www.3mediaweb.com/digital-experience/build/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.944,50000,False,5,Medium,40.0,0.0,0.0,1
+Agency Partner Interactive LLC,US,"Plano, TX",https://agencypartner.com/web-design-and-development-lp/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.966,5000,False,5,Medium,10.0,20.0,0.0,1
+Marcel Digital,US,"Chicago, IL",https://www.marceldigital.com/contact%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.819,5000,False,5,Medium,40.0,0.0,0.0,1
+The Gnar Company,US,"Needham, MA",https://www.thegnar.com/web-development%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.819,25000,False,5,Medium,30.0,30.0,0.0,0
+SumatoSoft,US,"Boston, MA",http://sumatosoft.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_content%3Dmain%2520website%26utm_campaign%3DClutch,29,4524000.0,4.825,25000,False,5,Medium,25.0,20.0,0.0,1
+Dedicated Developers,US,"Atlanta, GA",https://dedicateddevelopers.com/us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.05,25000,False,5,Medium,35.0,65.0,0.0,0
+thoughtbot,US,"New York, NY",https://thoughtbot.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.939,10000,False,5,Medium,30.0,25.0,10.0,1
+Tekglide,US,"Darien, IL",https://tekglide.com/contact-us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.836,10000,False,5,Medium,20.0,0.0,0.0,1
+BrandExtract,US,"Houston, TX",https://www.brandextract.com/Contact/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.011,25000,False,5,Medium,30.0,0.0,0.0,1
+The Brick Factory,US,"Washington, DC",https://thebrickfactory.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.918,10000,False,5,Medium,40.0,0.0,0.0,1
+EltexSoft,US,"Burbank, CA",https://eltexsoft.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.029,10000,False,5,Medium,25.0,10.0,10.0,1
+Lunarbyte.io,US,"Seattle, WA",https://www.lunarbyte.io/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.09,25000,False,5,Medium,40.0,30.0,30.0,1
+Susco Solutions,US,"Harvey, LA",https://suscosolutions.com/clutch-co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.911,50000,False,5,Medium,30.0,15.0,30.0,1
+Wolf&Whale,US,"Brooklyn, NY",https://www.wolfwhale.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.021,25000,False,5,Medium,20.0,0.0,0.0,1
+Solwey Consulting,US,"Austin, TX",https://solwey.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.09,10000,False,5,Medium,10.0,10.0,10.0,1
+Coherent Solutions,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiIyZjlmYTQzNi04MjVlLTQ5NGItYTJkNC0xNTY2OGU5ZjhjNzciLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsts7:VFfHcHoT2Atfg5qyeuemeMdXGIeaFeU9uFsuOUoGA-I,29,4524000.0,4.73,50000,False,5,Medium,15.0,0.0,0.0,1
+Proven,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI4YjBjZDJjNC0wMGY2LTRlNmQtYmI3NS04OTA2MzEzZDM3N2IiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsts7:rH12viQXCA0uSfGwNMfUaGlTxcshSNzTUNy0DWYp4Xc,29,4524000.0,4.912,25000,False,5,Medium,25.0,0.0,10.0,1
+Storm Brain,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiIyNGMxYzFiNC02ZjcxLTRkMDAtYWMzMy1lNTYwNTEyMDg5YzAiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsts7:Lt2yDu7wtva3EJp1MoJjQYNBsEmI3R5VG6mKOG9rHIY,29,4524000.0,5.0124,10000,False,5,Medium,40.0,0.0,0.0,1
+Cleveroad,US,"New York, NY",https://www.cleveroad.com/offer/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.977,10000,False,5,Medium,28.0,10.0,30.0,1
+BairesDev,US,"San Francisco, CA",https://www.bairesdev.com/lp/c/software-development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.962,50000,False,5,Medium,20.0,0.0,30.0,1
+DRUM'N'CODE,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI3M2JiZmQ2Yi1kOTE5LTRmNWUtOGY0NS05MmI0ODE1ODU1ZGUiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsts7:0pjaclW6Y3-zlpKuQW-BXuYoCqvkUuxyAkmPtTkpw50,29,4524000.0,5.025,1000,False,5,Medium,30.0,10.0,30.0,1
+Appunite,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI4ZTNhNzM3My02YjNkLTRjZjMtOWFjYS1jZDQwODFmMjIyM2IiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsts7:PuQQmltAHVu2E9pugYHO4uOTxoCvy8D3x_ysPByUOEA,29,4524000.0,4.921,10000,False,5,Medium,20.0,0.0,20.0,1
+TKX Media,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiIxYmE5NjkyYy1kNjU5LTQ0NTEtYjI2NC03MjNjM2E1NTMzZjEiLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsts7:eBQWEytSa24nU5fPV1mWkz7M7cg0XWazN_NYpKUwKqY,29,4524000.0,5.011,5000,False,5,Medium,40.0,0.0,0.0,1
+Urban Insight,US,"Los Angeles, CA",https://urbaninsight.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.037,50000,False,5,Medium,50.0,0.0,0.0,1
+Lounge Lizard,US,"Austin, TX",https://www.loungelizard.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,7,1092000.0,4.843,25000,False,3,Medium,60.0,0.0,0.0,1
+Social Driver,US,"Bellingham, WA",https://www.socialdriver.com/landing-pages/capabilities-services%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,13,2028000.0,4.975,25000,False,3,Medium,50.0,0.0,0.0,1
+Five Jars,US,"Arlington, VA",https://fivejars.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.931,10000,False,5,Medium,50.0,15.0,0.0,1
+Orbit Media Studios,US,"Chicago, IL",https://www.orbitmedia.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.031,50000,False,5,Medium,30.0,0.0,0.0,1
+Geniusee,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiJiZDgzZDM0Ny0xMjMyLTQ4ZTctODIxMi1iNDQyYTNhM2UyYmYiLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsts7:1pd1QZwmMz224DuMM-xcszv2HaKvhug3nCLXOlOBBZ0,14,2184000.0,5.067,50000,False,3,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiJjNzk2Y2FiYS05N2NhLTRmMWMtOWE0YS03MzVhOWMwMGE3MmIiLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsts7:uTx2IpxliCdkRLiFTLBLV4Z2luVqitNuw2Xd2S48rSo,1,156000.0,4.937,10000,False,3,Medium,35.0,41.0,0.0,0
+Arounda,US,Completed projects in 19 countries,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiIwZGI5Y2E3Zi1lYTViLTQ1NGEtODM2Yy1jNDhmMTdkNDcyZjQiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsts7:SUGLt9r8A8KyTlQyRi9lXV6sfIY5WbYuZhk1dbt2pA8,29,4524000.0,5.072,25000,False,5,Medium,30.0,0.0,0.0,1
+HUEMOR,US,"Pittsburgh, PA",https://huemor.rocks%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.872,25000,False,5,Medium,40.0,0.0,0.0,1
+Scopic,US,"Marlborough, MA",https://scopicsoftware.com/web-development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.962,10000,False,5,Medium,25.0,10.0,0.0,1
+Dev Technosys,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiJkNjYyNzMzMy05YmQ1LTQwYjAtOTY0ZC00MDQ3ZmYyYjRkNzAiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsts7:82mjthSjm4sfrchuTCBXazIX7_IO_jW45i0or-6CsOU,100,15600000.0,4.8201,10000,False,5,Medium,10.0,35.0,0.0,2
+Rekos Agency,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI3ODIyYjFhZS0zNzU4LTRkMGQtYWVhNC05ZGQ5MTgyYzAwYzUiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsts7:XMeUA4OkkVWqvXU42ESTVEzRZax7pCGH8re9tPrIyHw,29,4524000.0,4.926,5000,False,5,Medium,30.0,0.0,0.0,1
+Appello Software,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI1NDQ3N2EwYS1hOGY0LTQxYWMtYTkyYS0xZDA4NDQzNWU3NDIiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsts7:_9oWqhh5tK0NDuIwv6hq-blf5USrqLMyULgtOr4y2Cg,33,5148000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+"Wakefly, Inc.",US,"Westborough, MA",https://www.wakefly.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.824,25000,False,5,Medium,55.0,0.0,20.0,1
+UPQODE,US,"Atlanta, GA",https://upqode.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,3,468000.0,4.993,5000,False,3,Medium,40.0,10.0,0.0,1
+Read more,US,United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI3ZjhkMzVmMy0wNTQ2LTQ0NTQtODhlNS0zZjkyOTI2NDZkN2MiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsts7:rF93uvCMcA_k09OFvOpY3R7BYDMaNuSkIayF2yzSZkQ,29,3770000.0,0.0,10000,False,3,Medium,20.0,20.0,0.0,3
+ExpandX,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMwMjA4MTQxLWFjZTEtNDEwYi1iMzExLTQxNzNlZWYyYTAxYiIsImltcHJlc3Npb25faWQiOiI0YzM0ZTU2Zi02MjZmLTRhMDMtODBjMy1kYWMzODQ1MDkxMzQiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsts7:1TbXHQ0dOh9k4wD1hoyzvboV_6Zma2pqa_Rqfu9j5Aw,11,1716000.0,5.066,10000,False,3,Medium,30.0,0.0,0.0,1
+DOOR3,US,"New York, NY",https://www.door3.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.945,25000,False,5,Medium,25.0,0.0,0.0,1
+Oshyn,US,"Cypress, CA",https://www.oshyn.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.918,25000,False,5,Medium,100.0,0.0,0.0,1
+LLT Group,US,"Los Angeles, CA",http://WWW.LLT-GROUP.COM,50,7800000.0,4.985,25000,False,5,Medium,45.0,0.0,0.0,1
+Storm Brain,US,"Carlsbad, CA",https://stormbrain.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.0124,10000,False,5,Medium,40.0,0.0,0.0,1
+Collective42,US,"Encinitas, CA",https://collective42.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.029,5000,False,5,Medium,35.0,0.0,0.0,1
+Orases,US,"Frederick, MD",https://www.orases.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.071,75000,False,5,Medium,20.0,20.0,20.0,1
+Vrrb - Web & Product Design Agency,US,"Los Angeles, CA",http://www.vrrb.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.934,25000,False,5,Medium,25.0,0.0,10.0,1
+JetRockets,US,"Brooklyn, NY",https://jetrockets.com/,29,4524000.0,4.946,25000,False,5,Medium,30.0,0.0,30.0,1
+Ignite Visibility,US,"San Diego, CA",https://ignitevisibility.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.817,10000,False,5,Medium,10.0,0.0,0.0,1
+efelle creative,US,"Seattle, WA",http://www.seattlewebdesign.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.063,25000,False,5,Medium,30.0,0.0,0.0,1
+"Oomph, Inc.",US,"Providence, RI",https://oomphinc.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,4524000.0,5.017,25000,False,5,Medium,30.0,0.0,10.0,1
+Swovo,US,"Boulder, CO",https://flatirons.com/services/web-development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.027,50000,False,5,Medium,40.0,20.0,10.0,1
+Perpetual,US,"New York, NY",http://www.perpetualny.com/services/web-development/%3Futm_source%3Dclutch.co/%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.996,25000,False,5,Medium,20.0,10.0,10.0,1
+Three29,US,"Jacksonville, FL",https://three29.com/top-web-developers/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.94,10000,False,5,Medium,25.0,0.0,0.0,1
+Diffco,US,"San Jose, CA",https://diffco.us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.031,25000,False,5,Medium,15.0,15.0,0.0,1
+RoleModel Software,US,"Apex, NC",https://www.rolemodelsoftware.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.924,5000,False,5,Medium,40.0,0.0,40.0,1
+Ammo Studio,US,"Dallas, TX",https://www.ammo.studio/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,100,15600000.0,4.917,10000,False,5,Medium,35.0,0.0,0.0,2
+Culture Foundry,US,"Austin, TX",https://www.culturefoundry.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.015,25000,False,5,Medium,30.0,0.0,10.0,1
+Off-Site Services,US,"New York, NY",https://www.oss-usa.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.05,10000,False,5,Medium,70.0,0.0,0.0,1
+Baunfire,US,"San Jose, CA",https://www.baunfire.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.932,75000,False,5,Medium,55.0,0.0,0.0,1
+INOXOFT,US,"Newark, DE",https://inoxoft.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,3770000.0,0.0,25000,False,3,Medium,40.0,0.0,0.0,3
+Airdev,US,"San Francisco, CA",https://www.airdev.co/bubble-development/bubble-agency%3Fcontent%3Dgeneral%26utm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+KITRUM,US,"Tampa, FL",https://kitrum.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,25000,False,3,Medium,20.0,0.0,0.0,3
+Dualboot Partners,US,"Charlotte, NC",https://dualbootpartners.com/clutch/web-development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,3770000.0,0.0,75000,False,3,Medium,20.0,0.0,0.0,3
+Toptal,US,"San Francisco, CA",https://www.toptal.com/%3Futm_source%3Dclutch,29,3770000.0,0.0,50000,False,3,Medium,15.0,0.0,0.0,3
+KrishaWeb,US,"Loveland, CO",https://www.krishaweb.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,3770000.0,0.0,5000,False,3,Medium,40.0,0.0,0.0,3
+Apptechies,US,"Austin, TX",https://www.apptechies.com%3Futm_source%3Dclutch%26utm_medium%3Ddirectory%26utm_campaign%3Dbusiness_listing,29,3770000.0,0.0,10000,False,3,Medium,35.0,0.0,0.0,3
+The Frontend Company,US,"Covina, CA",https://thefrontendcompany.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,10000,False,3,Medium,100.0,0.0,0.0,3
+CyberCraft,US,"San Francisco, CA",https://cybercraftinc.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,50000,False,3,Medium,40.0,0.0,0.0,3
+"Jahnel Group, Inc.",US,"Schenectady, NY",https://www.jahnelgroup.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,25000,False,3,Medium,40.0,0.0,0.0,3
+Vincit,US,"Irvine, CA",https://www.vincit.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,3770000.0,0.0,50000,False,3,Medium,30.0,0.0,0.0,3
+Bacancy,US,"Miami, FL",https://www.bacancytechnology.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+Freshy,US,"Binghamton, NY",https://freshysites.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3770000.0,0.0,5000,False,3,Medium,45.0,0.0,0.0,3
+Evince Development,US,"New York, NY",https://evincedev.com/web-development-company/,29,3770000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+HTMLPanda,US,"Boston, MA",https://www.htmlpanda.com/ecommerce-development.php%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddevelopers-ecommerce,29,3770000.0,0.0,1000,False,3,Medium,40.0,0.0,0.0,3
+Coherent Solutions,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI4ZWQxMGMxYy1jMGZjLTQ3M2MtODliMi05YTI2Mzk5OTYyNGYiLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfj:UUeltDVVVwNXUQwrIc7M4HJGymyoCJCQcHeMTh7IZN4,29,4524000.0,4.73,50000,False,5,Medium,15.0,0.0,0.0,1
+Proven,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI1NGUwOGNiMC1hYzg1LTQ0MGUtOTEwZC0xZTY1OWRiYjJmMmYiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfj:6Q5M8oW059jJjtz6gGPYxQcv6mcTxsWCmpmKICzW4eg,29,4524000.0,4.912,25000,False,5,Medium,25.0,0.0,10.0,1
+Storm Brain,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiJjYzI2YTNhMy0yMmE0LTQxOTMtOWQxZS1iNTYxM2JiNzA0MGEiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfj:3u7i8-VwjqXBmPA6AnUZ0vZKXSu_jfvPZiwUeZVlHLc,29,4524000.0,5.0124,10000,False,5,Medium,40.0,0.0,0.0,1
+Wve Labs,US,"Beverly Hills, CA",https://www.wvelabs.com/contactus%3Futm_source%3Dclutch.co%26utm_medium%3Dprofilebutton%26utm_campaign%3Dwveclutch,29,4524000.0,5.031,10000,False,5,Medium,20.0,50.0,0.0,0
+Simpalm,US,"Chicago, IL",https://www.simpalm.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dclutch-boosted-placements,23,3588000.0,4.964,25000,False,3,Medium,15.0,50.0,0.0,0
+DRUM'N'CODE,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI4NDAwZjU3ZC0xZWVmLTQyZGMtOWExZi02MjdiNDVlNzkzM2YiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfj:UZEoSJFPGkc7vLwLletpyJ7aOASrZ_FcaKyTV6UnwS8,29,4524000.0,5.025,1000,False,5,Medium,30.0,10.0,30.0,1
+Appunite,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI4OTBhOTRmOC01YzQzLTRjYzQtYTBjMC0yOTAyYWNjN2NkZjUiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfj:oacvc48KzbFqXoLD9BFAdRsbgnXxcC6dEL3c3hfMyk4,29,4524000.0,4.921,10000,False,5,Medium,20.0,0.0,20.0,1
+TKX Media,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiJhYTE4OGVhNS1iNDdkLTQxMDEtOTVmMi04NjFhYjcxYjBjYjciLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfj:UBTWIrvrpv5DML1WNNbCVEXHSreGKgsW3OoURAAUF-Y,29,4524000.0,5.011,5000,False,5,Medium,40.0,0.0,0.0,1
+Calibrate Software,US,"Chicago, IL",https://www.calibrated.io/contact/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.937,25000,False,5,Medium,25.0,40.0,10.0,0
+Sembit,US,"Portland, OR",https://www.sembit.com/Clutch/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.932,5000,False,5,Medium,30.0,40.0,0.0,0
+VisualFizz,US,"Chicago, IL",https://www.visualfizz.com/services/web-development-agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.026,5000,False,5,Medium,25.0,0.0,0.0,1
+N4 Studio®,US,"Los Angeles, CA",https://www.n4.studio/webflow-enterprise-agency,29,4524000.0,5.021,5000,False,5,Medium,50.0,0.0,0.0,1
+Emergent Software,US,"Minneapolis, MN",https://www.emergentsoftware.net/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb%2Bdevelopment%2Bus,29,4524000.0,4.935,25000,False,5,Medium,25.0,0.0,30.0,1
+Geniusee,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiIwMGFkY2RmNS0xYWUwLTQ2M2EtYmQyZC0xOTU0MmM4YThlMjUiLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfj:2wU0hBFl9r3fTzwFnChN1Dz9yAq22ZwKbK19pGrcKow,29,4524000.0,5.067,50000,False,5,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiJkOTYzZDU1My04ZDYwLTRkOWUtOGFiNi1lMWUwOGRiOTk1MTMiLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfj:fWFKCBJHIRzXctYcYRVBst-8hwc35pgLwTeTLpF16Pk,29,4524000.0,4.937,10000,False,5,Medium,35.0,41.0,0.0,0
+Arounda,US,United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI4MTk0MzNiOS1mYzEyLTQzNGMtOTEzNS1kZjJhNDFmYjA5NjgiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfj:hq7q9H2c1herjMiZ2tvIXFU0lx6mvk-Rkgyvw0YVA84,29,4524000.0,5.072,25000,False,5,Medium,30.0,0.0,0.0,1
+Orangesoft,US,"San Francisco, CA",https://orangesoft.co/%3Futm_source%3Dclutch%26utm_medium%3Dreferral,29,4524000.0,4.941,25000,False,5,Medium,20.0,40.0,0.0,0
+Clockwork,US,"Minneapolis, MN",https://www.clockwork.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.01,75000,False,5,Medium,20.0,10.0,15.0,1
+Dev Technosys,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI2Y2QzMTI5ZS1iYmM2LTQ1Y2ItOWMxMy0xZmVmNTE5NWU2YmMiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfj:UvqgSnkpkyXko6Q1WCFShURANCrwhpBTnTJPDQ8EcEA,100,15600000.0,4.8201,10000,False,5,Medium,10.0,35.0,0.0,2
+Rekos Agency,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI2OWJiNzE0YS1hYzM3LTQzODgtOTZmOS02MjI2NzMxODkyNDUiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfj:r0eNwKqMrlKjN9-_nyJVBDzJZZWUdK3JNAKqTWruogs,29,4524000.0,4.926,5000,False,5,Medium,30.0,0.0,0.0,1
+Appello Software,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI2NDczMmQwYi0zZDVjLTRkYzQtYjc1OS0wM2IyNjY2ZDNmMmMiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfj:PEKq7pIsDK_l-L2EOFI3fjIFfi19DyTugMU_dSzSoQA,33,5148000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Topflight Apps,US,"Irvine, CA",https://topflightapps.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.94,50000,False,5,Medium,15.0,30.0,0.0,0
+August Ash,US,"Bloomington, MN",https://www.augustash.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.823,10000,False,5,Medium,30.0,0.0,0.0,1
+Read more,US,United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiI5MTQxMjc4My1iNDAyLTQwMmItOThkMy03ZjdiZWJkNGRmOWQiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfj:JjA7T167jcTkjVme411i0Dx02FGdwOhv_PyT9QmEY8w,29,3770000.0,0.0,10000,False,3,Medium,20.0,20.0,0.0,3
+ExpandX,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjM0YWY3OTk2LWU4MTYtNDEyZi1hN2RjLTQ1YjFkNjA2MDMzMSIsImltcHJlc3Npb25faWQiOiIwYmE3MTFiNy1lZjcyLTRjZmUtOGJjOS03NzBiNDMwYjRlZTQiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfj:28jv5rJNtOtGdwM_FwtoYB6eYmcDCn2XpZ9GfpMrr5E,29,4524000.0,5.066,10000,False,5,Medium,30.0,0.0,0.0,1
+"Six Feet Up, Inc.",US,"Fishers, IN",https://sixfeetup.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.024,50000,False,5,Medium,10.0,0.0,50.0,1
+Temper And Forge,US,"Boston, MA",https://temperandforge.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,5.05,10000,False,5,Medium,35.0,0.0,0.0,1
+Synergy Labs,US,"Atlanta, GA",https://www.synergylabs.co/top-app-development,29,4524000.0,4.945,25000,False,5,Medium,10.0,60.0,10.0,0
+Bluelight,US,"Sacramento, CA",https://bluelight.co/landing/hire-top-us-web-developers%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.017,10000,False,5,Medium,20.0,0.0,30.0,1
+AppMakers USA,US,"Los Angeles, CA",https://appmakersla.com/clutch/mobile/us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,4524000.0,5.096,10000,False,5,Medium,10.0,55.0,0.0,0
+Red Foundry,US,"Chicago, IL",http://www.redfoundry.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.845,50000,False,5,Medium,20.0,60.0,0.0,0
+Moonstone Interactive,US,"San Ramon, CA",https://www.msinteractive.com/is-your-website-helping-you-grow/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.011,10000,False,5,Medium,35.0,10.0,10.0,1
+VALMAX,US,"Chicago, IL",https://valmax.agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,4524000.0,5.09,5000,False,5,Medium,35.0,0.0,0.0,1
+Phenomenon Studio,US,"Allentown, PA",https://phenomenonstudio.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,1,156000.0,5.05,10000,False,3,Medium,15.0,10.0,10.0,0
+Capitol Tech Solutions,US,"Sacramento, CA",https://www.capitoltechsolutions.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.014,10000,False,5,Medium,30.0,0.0,30.0,1
+Facet Interactive,US,"El Segundo, CA",https://facetinteractive.com/services/web-msp%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.923,5000,False,5,Medium,10.0,0.0,10.0,1
+iTech4Web,US,"Lisle, IL",https://itech4web.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.91,10000,False,5,Medium,70.0,0.0,0.0,1
+Saritasa,US,"Chicago, IL",https://www.saritasa.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dclutch_profile,29,4524000.0,4.8101,50000,False,5,Medium,10.0,10.0,40.0,1
+Lform Design,US,"Montclair, NJ",https://lform.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.833,25000,False,5,Medium,35.0,0.0,0.0,1
+Coalition Technologies,US,"Austin, TX",https://coalitiontechnologies.com/contact/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.8158,1000,False,5,Medium,10.0,0.0,0.0,1
+Buzzworthy Studio,US,"Brooklyn, NY",https://buzzworthystudio.com/contact,29,4524000.0,5.021,25000,False,5,Medium,25.0,0.0,15.0,1
+Twin Sun,US,"Nashville, TN",https://twinsunsolutions.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.02,25000,False,5,Medium,25.0,0.0,25.0,1
+VOLTAGE,US,"Kansas City, MO",https://voltage.digital/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.09,5000,False,5,Medium,20.0,0.0,0.0,1
+Groundwrk,US,"Denver, CO",https://www.groundwrk.com/clutch-home/,29,4524000.0,5.016,25000,False,5,Medium,45.0,0.0,0.0,1
+"New Target, Inc. - The Digital Agency",US,"Alexandria, VA",http://www.newtarget.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.932,10000,False,5,Medium,20.0,0.0,0.0,1
+Mantyweb LLC,US,"Cypress, TX",https://mantyweb.com/web-services/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.01,5000,False,5,Medium,50.0,0.0,0.0,1
+Big Red Jelly,US,"Provo, UT",https://bigredjelly.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.916,1000,False,5,Medium,10.0,0.0,0.0,1
+Taoti Creative,US,"Washington, DC",https://taoti.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.916,25000,False,5,Medium,20.0,0.0,0.0,1
+Imarc,US,"Amesbury, MA",https://info.imarc.com/top-web-development-agency-on-clutch,29,4524000.0,4.833,75000,False,5,Medium,25.0,0.0,0.0,1
+NEWMEDIA.COM,US,"Denver, CO",https://newmedia.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.021,10000,False,5,Medium,15.0,0.0,0.0,1
+Plaudit Design,US,"New York, NY",https://www.plaudit.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,23,3588000.0,5.01,25000,False,3,Medium,25.0,0.0,0.0,1
+CyberOptik,US,"Elmhurst, IL",https://www.cyberoptik.net/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.987,1000,False,5,Medium,50.0,0.0,0.0,1
+Dragon Army,US,"Atlanta, GA",https://dragonarmy.com/our-work%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.916,25000,False,5,Medium,20.0,10.0,0.0,1
+Non-Linear Studio,US,"Park City, UT",https://non-linear.studio/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.05,25000,False,5,Medium,40.0,0.0,0.0,1
+Gatorworks,US,"Baton Rouge, LA",https://gatorworks.net/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.925,10000,False,5,Medium,20.0,0.0,0.0,1
+Troy Web Consulting,US,"Cohoes, NY",https://www.troyweb.com,29,4524000.0,4.912,25000,False,5,Medium,20.0,0.0,25.0,1
+LaunchPad Lab,US,"Chicago, IL",https://launchpadlab.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.842,10000,False,5,Medium,20.0,0.0,15.0,1
+ParallelStaff,US,"Richardson, TX",https://parallelstaff.com,29,4524000.0,4.88,25000,False,5,Medium,10.0,10.0,10.0,1
+Jalasoft,US,"Houston, TX",https://jalasoft.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,39,6084000.0,4.97,100000,False,5,Medium,10.0,10.0,10.0,1
+Visceral,US,"San Diego, CA",https://thisisvisceral.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dseo-firms,29,4524000.0,5.025,50000,False,5,Medium,30.0,0.0,0.0,1
+Windmill Strategy,US,"Minneapolis, MN",https://www.windmillstrategy.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.924,25000,False,5,Medium,25.0,0.0,0.0,1
+Eastern Standard,US,"Philadelphia, PA",https://easternstandard.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.06,25000,False,5,Medium,25.0,0.0,0.0,1
+The Media Captain,US,"Columbus, OH",https://www.themediacaptain.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.946,1000,False,5,Medium,35.0,0.0,0.0,1
+Agency Jet,US,"Las Vegas, NV",https://www.agencyjet.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.855,1000,False,5,Medium,25.0,0.0,0.0,1
+Coherent Solutions,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJhMzdiYmM1Zi05ZjNlLTRiODktYjRjMy0wZGRlNTYzMDRmYjMiLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfu:OLY-AvU9ON15zeteCwF1eVg5WsmjOa8F6xoo8SKRvNk,29,4524000.0,4.73,50000,False,5,Medium,15.0,0.0,0.0,1
+Proven,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiI1M2VjNDQzNS0wOGQ2LTRlYzUtYWIxZS0zMzA0ZDI2NjcwZjIiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfu:fpKUsbLJTgEAN-XGKWtn-DAIqBv-WBWrtRXOj8_NcTE,29,4524000.0,4.912,25000,False,5,Medium,25.0,0.0,10.0,1
+Storm Brain,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiI2MTZjZmZjMS1lNzUxLTQ5MmItYjk5NC1kMjAzNjFiMjY4ZDQiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfu:C1PycsNHCJUjzHS9k8lOGap0CYRxLL0km_TQcSPT3bs,29,4524000.0,5.0124,10000,False,5,Medium,40.0,0.0,0.0,1
+Flamingo Agency,US,"Chicago, IL",https://www.flamingoagency.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,5.052,1000,False,5,Medium,80.0,0.0,0.0,1
+ThreeSixtyEight,US,"Baton Rouge, LA",https://www.threesixtyeight.com/clutch%3Futm_source%3Dclutch%26utm_medium%3Dreferral,29,4524000.0,4.951,25000,False,5,Medium,35.0,0.0,0.0,1
+DRUM'N'CODE,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJiNTE2YTc3Yi0zYTcwLTQ5MDktYjJkZS03YjY2MTA1NjgxMjEiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfu:MiDKGPuVzxzVzwR5DkcvkTAaipiawjIEkbo_tOOPH5A,29,4524000.0,5.025,1000,False,5,Medium,30.0,10.0,30.0,1
+Appunite,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiI3Nzg4Y2VjYS0zNGI2LTRkMzItOWVlNS1jZTI3MjJlOGY4NDQiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfu:OJmvDMSBZDTVlxY3hXJTOxHnARmWWfUgBGg5udOi2c8,29,4524000.0,4.921,10000,False,5,Medium,20.0,0.0,20.0,1
+TKX Media,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiI0NjcwMWM5Yy1hZjFlLTQ5NGEtYjlhMy03OGM5NjYzZjFjYTIiLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfu:FV1EHNOEFGGy_VT4um4XuPN4BZUxWsp5Je3dtp0GmzY,29,4524000.0,5.011,5000,False,5,Medium,40.0,0.0,0.0,1
+Atmosphere Apps,US,"Gainesville, FL",https://www.atmosphereapps.com/clutch/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.918,25000,False,5,Medium,20.0,30.0,0.0,0
+Isadora Agency,US,"Manhattan Beach, CA",https://isadoradigitalagency.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.818,75000,False,5,Medium,25.0,0.0,0.0,1
+GenAI.Labs USA,US,"San Diego, CA",https://www.genai-labs.io%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.023,5000,False,5,Medium,10.0,10.0,0.0,1
+Burst Digital,US,"New York, NY",https://burstdgtl.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,4524000.0,4.926,5000,False,5,Medium,10.0,0.0,0.0,1
+LookFar Labs,US,"New Orleans, LA",http://lookfar.com/labs%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.926,50000,False,5,Medium,15.0,10.0,15.0,1
+Geniusee,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiIzYzFlZjEyNy04M2RhLTQ1MTMtOTFmZi1iZGEyMGY2ODlhYTciLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfu:w7R28KAXSqnnLxsVoB1D-e0wuVmQVDN82pYrz54MbgY,29,4524000.0,5.067,50000,False,5,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJmMGRhNzg0OC04ZWMyLTQ0N2QtOTZlOC04NTg5MDVmY2FlNDciLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfu:MWMxEt8I96cmX3ZhCPYTGc3Lo46jpvHkCIbxNtlytME,1,156000.0,4.937,10000,False,3,Medium,35.0,41.0,0.0,0
+Arounda,US,Completed projects in 19 countries,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJiZDcwYWQ2Yi01OGEyLTQxZTktOWRhYi1jZjZjNzU3ZTljNTIiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfu:llkrWcqUxuIwz-hYPosQhqSk6JXMX4kV3bsHDps6kL8,29,4524000.0,5.072,25000,False,5,Medium,30.0,0.0,0.0,1
+Blacksmith Agency,US,"Phoenix, AZ",https://blacksmith.agency/web-design-development-clutch/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,100,15600000.0,4.717,50000,False,5,Medium,30.0,0.0,10.0,2
+Captivation Agency,US,"Sarasota, FL",https://captivation.agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dvendor-profile,29,4524000.0,5.019,5000,False,5,Medium,15.0,0.0,0.0,1
+Dev Technosys,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJlMmVlMmMyOS1kZWJiLTQzOGMtYjVmMi1kYTU4NGFkZTM0ODEiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstfu:-7u0eXc5-OdiVfw-IlX23PIheOumv7cDwbCV6Px2pS0,29,4524000.0,4.8201,10000,False,5,Medium,10.0,35.0,0.0,0
+Rekos Agency,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiIzYzMzYzc1Ny03ODYyLTQ5NjUtYmM5Yy1kMGMwYTI0ZTM1ODIiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfu:cbB5_2zxij8TC-CAb9qgSPugYubf6PnIZsgqB-RF7Rk,29,4524000.0,4.926,5000,False,5,Medium,30.0,0.0,0.0,1
+Appello Software,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiI0YmE3ZDI1MC1hOGFhLTQ2YjktOTc1YS1iMjk3YWE3MjlmMDEiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfu:KaDtZWMR875RljptVaWG8mHa0jB0MEczBQw_VKehUWw,29,4524000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Dotlogics,US,"Hicksville, NY",https://www.dotlogics.com/services/website-and-digital-experience%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.028,25000,False,5,Medium,50.0,0.0,0.0,1
+Hooked On Code,US,"Dallas, TX",https://hookedoncode.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.034,5000,False,5,Medium,50.0,0.0,0.0,1
+Read more,US,United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJmMTA5Y2JiOS01NTZmLTRlMTAtODY1NC1kODZjMWM0Yzk1MmUiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstfu:AVl9E2K1Z03pKKtc54TjeNsxHUjm6JIJsit0W44KH7E,29,3770000.0,0.0,10000,False,3,Medium,20.0,20.0,0.0,3
+ExpandX,US,Serves United States,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjI3NGEwYzVlLTEwNGUtNDc3Ny04ZjY3LTI0YzRiOTdjMzIzMyIsImltcHJlc3Npb25faWQiOiJlMDE3YTBkZS00NmEzLTQ1NjUtYmE3My0wZDQ1Yzk0ZmVlMjkiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstfu:zdXYuULjb3v3Q1dimci_QiPgxcvAlTyXl2YWVUKH8bI,11,1716000.0,5.066,10000,False,3,Medium,30.0,0.0,0.0,1
+Cantilever Web Design & Development,US,"New York, NY",http://cantilever.co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.934,10000,False,5,Medium,40.0,0.0,0.0,1
+imaga ~ When UX & AI Both Matter,US,"San Mateo, CA",https://imaga.ai%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-usa,33,5148000.0,4.928,10000,False,5,Medium,20.0,20.0,0.0,1
+Embark,US,"Corona, CA",https://embarkwork.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.017,5000,False,5,Medium,40.0,0.0,0.0,1
+"Blueshoon, inc",US,"Chicago, IL",http://www.blueshoon.com/%3Fsource%3Dclutch%26utm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.83,10000,False,5,Medium,50.0,0.0,0.0,1
+Bilberrry,US,"Seattle, WA",https://bilberrry.com/%3Futm_source%3Dclutch.co%26utm_campaign%3Dclutch_software,29,4524000.0,5.034,25000,False,5,Medium,10.0,0.0,50.0,1
+Zealth Digital Marketing,US,"Downers Grove, IL",https://zealth.net,29,4524000.0,5.016,5000,False,5,Medium,30.0,0.0,0.0,1
+Rootstack,US,"Austin, TX",http://www.rootstack.com/%3Futm_source%3Dother%26utm_medium%3Dclutch.co%26utm_campaign%3Ddirectory,29,4524000.0,4.82,10000,False,5,Medium,10.0,20.0,30.0,1
+Black Airplane,US,"Woodstock, GA",https://www.blackairplane.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.913,25000,False,5,Medium,25.0,0.0,30.0,1
+Tepia,US,"Atlanta, GA",https://www.tepia.co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.939,50000,False,5,Medium,10.0,50.0,10.0,0
+Cascade Web Development,US,"West Linn, OR",https://cascadewebdev.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.71,5000,False,5,Medium,40.0,0.0,0.0,1
+Ajroni,US,"Atlanta, GA",https://ajroni.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,21,3276000.0,5.09,1000,False,3,Medium,20.0,10.0,0.0,1
+ThirstySprout,US,"Seattle, WA",https://www.thirstysprout.com/,29,4524000.0,5.022,50000,False,5,Medium,10.0,10.0,10.0,1
+App Maisters Inc.,US,"Dallas, TX",https://www.appmaisters.com/%3Futm_source%3Dclutch%2B%26utm_medium%3Dclutch%2B%26utm_id%3Dhome%2B,23,3588000.0,4.923,5000,False,3,Medium,10.0,25.0,10.0,0
+Solid Digital,US,"Chicago, IL",https://www.soliddigital.com/top-web-design-agency-clutch%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.94,75000,False,5,Medium,65.0,0.0,0.0,1
+Very,US,"Bozeman, MT",https://www.verytechnology.com/book-a-meeting,29,4524000.0,4.819,250000,False,5,Medium,10.0,10.0,0.0,1
+Cleartail Marketing,US,"St. Petersburg, FL",https://cleartailmarketing.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.917,1000,False,5,Medium,35.0,0.0,0.0,1
+Mojo Media,US,"Austin, TX",https://mojo-agency.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,1,156000.0,5.05,1000,False,3,Medium,70.0,0.0,0.0,1
+Neologic Software,US,"Northbrook, IL",http://neologic.dev/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.044,5000,False,5,Medium,25.0,0.0,40.0,1
+Anderson Collaborative™,US,"Fort Lauderdale, FL",http://andersoncollaborative.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,50,7800000.0,4.923,5000,False,5,Medium,10.0,0.0,0.0,1
+ActiveColor,US,"Los Angeles, CA",https://www.activecolor.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.016,25000,False,5,Medium,25.0,0.0,0.0,1
+MeanPug Digital,US,"New York, NY",https://www.meanpug.com/contact-us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.01,10000,False,5,Medium,10.0,0.0,10.0,1
+Five Pack,US,"Atlanta, GA",https://fivepackcreative.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,4,624000.0,4.919,50000,False,3,Medium,15.0,35.0,0.0,0
+Lil Big Things,US,"New York, NY",https://www.lilbigthings.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.011,1000,False,5,Medium,35.0,0.0,0.0,1
+Pen & Mug,US,"Nashville, TN",https://penandmug.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.041,10000,False,5,Medium,20.0,0.0,0.0,1
+Symmetri Marketing,US,"Chicago, IL",https://symmetrimarketing.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.88,50000,False,5,Medium,35.0,0.0,0.0,1
+Lightspace,US,"San Diego, CA",https://www.lightspace.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,5.013,10000,False,5,Medium,15.0,0.0,0.0,1
+Jax Media Team,US,"Jacksonville, FL",https://jaxmediateam.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.027,1000,False,5,Medium,15.0,0.0,0.0,1
+Idea Maker,US,"Irvine, CA",https://ideamaker.agency%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.927,25000,False,5,Medium,20.0,20.0,0.0,1
+Materiell,US,"Arlington, VA",https://materiell.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.927,25000,False,5,Medium,45.0,0.0,0.0,1
+Designocracy,US,"Dover, DE",https://thedesignocracy.com/web-design-and-development%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,5.029,5000,False,5,Medium,35.0,15.0,0.0,1
+Prolific Digital,US,"Louisville, KY",https://prolificdigital.com/,29,4524000.0,4.814,25000,False,5,Medium,25.0,0.0,0.0,1
+metajive,US,"Encinitas, CA",http://www.metajive.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.93,100000,False,5,Medium,40.0,0.0,0.0,1
+Top Notch Dezigns®,US,"Los Angeles, CA",https://www.topnotchdezigns.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,16,2496000.0,5.016,10000,False,3,Medium,50.0,0.0,0.0,1
+Proven,US,"Princeton, NJ",https://hs.proven.us/en/clutch%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.912,25000,False,5,Medium,25.0,0.0,10.0,1
+Flower Press Interactive,US,"Medina, WA",https://www.theflowerpress.net,29,4524000.0,4.929,10000,False,5,Medium,10.0,10.0,10.0,1
+thunder::tech,US,"Cleveland, OH",https://www.thundertech.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral,29,4524000.0,4.715,10000,False,5,Medium,10.0,0.0,0.0,1
+Iron Forge Development,US,"Palm Beach Gardens, FL",https://www.ironforge.co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,4524000.0,4.819,25000,False,5,Medium,10.0,10.0,20.0,1
+Fifteen4,US,"Baltimore, MD",https://fifteen4.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dus-web-developers,29,4524000.0,4.99,10000,False,5,Medium,15.0,0.0,0.0,1
+BLKDG,US,"Denver, CO",http://blkdg.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,4524000.0,4.928,1000,False,5,Medium,30.0,0.0,0.0,1
+Tech Alchemy,UK,"London, England",https://techalchemy.com/lp/web-dev%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dta_clutch_web-development_uk,29,3828000.0,5.033,25000,False,5,Medium,20.0,0.0,10.0,1
+Vention,UK,"Wien, Austria",https://ventionteams.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,5,660000.0,4.998,50000,False,3,Medium,10.0,10.0,10.0,0
+Uinno,UK,"Kingston upon Thames, England",https://uinno.io/product-development/web-development-services/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,4.927,10000,False,5,Medium,10.0,0.0,0.0,1
+Journi,UK,"London, England",https://journi.uk%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,5.013,25000,False,5,Medium,20.0,0.0,0.0,1
+thoughtbot,UK,"London, England",https://thoughtbot.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,4.939,10000,False,5,Medium,30.0,25.0,10.0,1
+Mentor Digital,UK,"Bristol, England",https://mentordigital.co.uk/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,4.94,10000,False,5,Medium,25.0,5.0,0.0,1
+CTI Digital,UK,"Lancaster, England",http://www.ctidigital.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,50,6600000.0,4.69,10000,False,5,Medium,20.0,0.0,0.0,1
+Clock Limited,UK,"London, England",https://www.clock.co.uk/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,18,2376000.0,4.819,50000,False,3,Medium,15.0,0.0,50.0,1
+"TRIARE, LLC",UK,Serves United Kingdom,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImI0N2YyNzY0LTRkNzEtNDFhYS05NzAwLTQwODBkMGVjODA0NyIsImltcHJlc3Npb25faWQiOiI5OTA0N2RiZC04M2NmLTQxOWQtODk3ZS05MjBmZDc1ZmFhYmQiLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NjgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzY3NTUsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstgA:LJx8sQy2QqeKIEE9WsITfGLaSU36dGUAtZr-_lkd0Lg,29,3828000.0,4.937,10000,False,5,Medium,35.0,41.0,0.0,0
+Magora,UK,Serves United Kingdom,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImI0N2YyNzY0LTRkNzEtNDFhYS05NzAwLTQwODBkMGVjODA0NyIsImltcHJlc3Npb25faWQiOiJlNDhjMWY3YS1hZWE2LTRjMWYtOWI3Mi00MzQyY2YwYjcyZWEiLCJwcm92aWRlcl9pZCI6MjUyNDMsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjQ2OCwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjIzODk0MSwicG9zaXRpb24iOjIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vstgA:HSr3L4yDQsDzuPBN6uBkarkLvRNHbF2m5OGSmZorTpE,29,3828000.0,4.77,25000,False,5,Medium,15.0,0.0,30.0,1
+STX Next,UK,"London, England",https://stxnext.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral,29,3828000.0,4.7101,50000,False,5,Medium,35.0,0.0,0.0,1
+"Digis, a Fiverr company (NYSE: FVRR)",UK,"Toronto, Canada",https://digiscorp.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,6,792000.0,4.988,5000,False,3,Medium,40.0,0.0,40.0,1
+unicrew,UK,"London, England",https://unicrew.com,6,792000.0,5.058,50000,False,3,Medium,40.0,10.0,40.0,1
+Light IT Global,UK,"Rickmansworth, England",https://light-it.net/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,4.952,25000,False,5,Medium,60.0,10.0,0.0,1
+Human Made,UK,"Matlock, England",https://humanmade.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,100,13200000.0,4.717,50000,False,5,Medium,100.0,0.0,0.0,2
+TatvaSoft,UK,"Melbourne, Australia",https://www.tatvasoft.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,3828000.0,4.947,25000,False,5,Medium,20.0,10.0,50.0,1
+Infinum,UK,"Zagreb, Croatia",https://infinum.com/clutch-lp/%3Futm_source%3Dclutch.co%26utm_campaign%3Dprofile-info-company-website%26utm_medium%3Dreferral,67,8844000.0,4.854,50000,False,5,Medium,20.0,0.0,20.0,2
+Webskitters,UK,"London, England",https://www.webskitters.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,4.9102,10000,False,5,Medium,20.0,30.0,0.0,0
+GeekyAnts,UK,"London, England",https://geekyants.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dsponsorship,1,132000.0,4.9111,10000,False,3,Medium,15.0,0.0,25.0,1
+Old.St Labs,UK,"London, England",https://www.old.st/contact/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,5.021,10000,False,5,Medium,30.0,20.0,30.0,1
+Visions Design,UK,"Lymm , England",https://www.visionsdesign.co.uk%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,5.067,10000,False,5,Medium,30.0,0.0,0.0,1
+Empat,UK,"London, England",https://empat.tech/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,8,1056000.0,5.0142,50000,False,3,Medium,10.0,50.0,40.0,0
+Konstant Infosolutions,UK,"London, England",https://www.konstantinfo.com/%3Frequest-a-quote%26utm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dclutch,1,132000.0,4.8166,5000,False,3,Medium,10.0,60.0,0.0,0
+Future Processing,UK,"London, England",http://www.future-processing.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,3828000.0,4.751,25000,False,5,Medium,10.0,0.0,45.0,1
+Solar Digital,UK,"London, England",https://solar-digital.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,5.075,10000,False,5,Medium,20.0,10.0,10.0,1
+Codal,UK,"Lincoln, England",https://www.codal.com/,29,3828000.0,4.921,75000,False,5,Medium,45.0,0.0,0.0,1
+COMPU-VISION S.A.R.L.,UK,"London, England",https://www.compu-vision.me/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,32,4224000.0,4.874,10000,False,5,Medium,40.0,40.0,20.0,0
+ExpandX,UK,"Sofia, Bulgaria",http://expandx.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,5.066,10000,False,5,Medium,30.0,0.0,0.0,1
+Goodface agency,UK,"Bromley, England",https://goodface.agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,3828000.0,4.947,10000,False,5,Medium,30.0,0.0,35.0,1
+Snotor,UK,"London, England",https://snotor.pro/web-development-company-snotor%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,5.031,10000,False,5,Medium,30.0,30.0,0.0,0
+Halo Lab,UK,"08, Andorra",https://www.halo-lab.com/services/web-development-services%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,4,528000.0,4.994,10000,False,3,Medium,10.0,10.0,10.0,0
+Soap Media,UK,"Manchester, England",https://www.soapmedia.co.uk/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,4.938,1000,False,5,Medium,10.0,0.0,0.0,1
+IIH Global,UK,"Hertfordshire, England",https://www.iihglobal.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,4.875,1000,False,5,Medium,10.0,0.0,35.0,1
+3 SIDED CUBE,UK,"Bournemouth, England",https://marketing.3sidedcube.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3828000.0,4.947,50000,False,5,Medium,15.0,15.0,10.0,1
+*instinctools,UK,"Mississauga, Canada",https://www.instinctools.com/contact-us/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dcompanyprofile,2,264000.0,4.731,10000,False,3,Medium,10.0,10.0,10.0,0
+Magora,UK,"Sydney, Australia",https://magora-systems.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,4.77,25000,False,5,Medium,15.0,0.0,30.0,1
+Tapptitude,UK,"London, England",https://tapptitude.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,4,528000.0,4.969,5000,False,3,Medium,20.0,50.0,0.0,0
+Lightflows,UK,"Guildford, England",https://www.lightflows.co.uk/web-development-agency-london/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3828000.0,5.09,10000,False,5,Medium,40.0,20.0,0.0,1
+Inventiff.,UK,"London, England",https://inventiff.io%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,7,924000.0,5.032,0,False,3,Medium,35.0,35.0,0.0,0
+TLVTech,UK,"London, England",https://www.tlvtech.io/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,4.912,10000,False,5,Medium,25.0,25.0,10.0,0
+CubeZoo,UK,"London, England",https://www.cubezoo.co.za/project-kickoff/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,33,4356000.0,4.931,10000,False,5,Medium,20.0,30.0,15.0,0
+Wozify,UK,"Preston, England",https://wozify.com/,31,4092000.0,5.018,10000,False,5,Medium,40.0,20.0,0.0,1
+Plavno,UK,"London, England",https://plavno.io/%3Futm_source%3Dclutch%26utm_id%3Dclutch%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,3,396000.0,4.955,25000,False,3,Medium,10.0,30.0,10.0,0
+CodeLeap,UK,"London, England",https://codeleap.co.uk/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,4.99,10000,False,5,Medium,20.0,35.0,0.0,0
+Republic Marketing,UK,"Birmingham, England",https://www.republicmarketing.co.uk/,29,3828000.0,5.02,5000,False,5,Medium,50.0,0.0,0.0,1
+KOTA,UK,"London, England",https://kota.co.uk/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,5.029,25000,False,5,Medium,10.0,0.0,0.0,1
+Offshorly,UK,"Stamford, England",https://offshorly.com/cl-ldng-1/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3828000.0,4.921,5000,False,5,Medium,15.0,0.0,0.0,1
+Takeaway Reality,UK,"Zagreb, Croatia",https://takeaway-reality.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,50,6600000.0,5.012,1000,False,5,Medium,10.0,0.0,15.0,1
+Dotsquares,UK,"London, England",https://clutch.dotsquares.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3190000.0,0.0,1000,False,3,Medium,20.0,0.0,0.0,3
+Imaginary Cloud,UK,"London, England",https://www.imaginarycloud.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3190000.0,0.0,25000,False,3,Medium,40.0,0.0,0.0,3
+Devsinc,UK,"San Jose, CA",https://www.devsinc.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dweb-developers-uk,29,3190000.0,0.0,10000,False,3,Medium,35.0,0.0,0.0,3
+dotcode,UK,"L'viv, Ukraine",https://dotcode.pro/top-rated-company-by-clutch/,29,3190000.0,0.0,25000,False,3,Medium,40.0,0.0,0.0,3
+Torchbox,UK,"Bristol, England",https://torchbox.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3190000.0,0.0,50000,False,3,Medium,40.0,0.0,0.0,3
+Marzee,UK,"Porto, Portugal",https://marzee.co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3190000.0,0.0,10000,False,3,Medium,65.0,0.0,0.0,3
+SENLA,UK,"Warszawa, Poland",https://senlainc.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3190000.0,0.0,10000,False,3,Medium,20.0,0.0,0.0,3
+Shout Digital,UK,"Newcastle upon Tyne, England",https://shoutdigital.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-developers,29,3190000.0,0.0,50000,False,3,Medium,40.0,0.0,0.0,3
+Influential Software,UK,"London, England",https://www.influentialsoftware.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Duk-web-dev,29,3190000.0,0.0,10000,False,3,Medium,35.0,0.0,0.0,3
+Webential,AU,"Wentworthville, Australia",https://www.webential.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.941,5000,False,5,Medium,25.0,0.0,0.0,1
+Appello Software,AU,"Brisbane City, Australia",http://www.appello.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Appello Software,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImMyZjc1NjdmLTNkYzctNDA3My04ZWJmLTk1ODRiNTE1MGQ0MSIsImltcHJlc3Npb25faWQiOiI5ZGRmMTYyNS02NTY4LTQ3MGItYjBiZS02ODU2MTkxZWNlNDgiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzYyMTgsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstgk:Q-HvO5z-oNApmXFkZGOgROtI8FP8pTZcIofybXOIhmw,29,3480000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Innowise,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImMyZjc1NjdmLTNkYzctNDA3My04ZWJmLTk1ODRiNTE1MGQ0MSIsImltcHJlc3Npb25faWQiOiI2MjJkMzY4NS0xM2MxLTQ1MWYtODdkNy0xNDlmNDdjOTk1YmYiLCJwcm92aWRlcl9pZCI6NDc3NjUzLCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzk1OTgsInBvc2l0aW9uIjoyLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstgk:Oj2lW4_MoMYZJXZ5DyyZ0pvLGrD-PIb06gGAZI_4dm4,1,120000.0,4.972,10000,False,3,Medium,10.0,10.0,10.0,0
+WP Creative,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImMyZjc1NjdmLTNkYzctNDA3My04ZWJmLTk1ODRiNTE1MGQ0MSIsImltcHJlc3Npb25faWQiOiJlYmFhZGU3ZS1jNjBjLTQwODAtOTZiZC02NTcwZWE5YzNlMTkiLCJwcm92aWRlcl9pZCI6MTY5MDQyMSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6NDU4LCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzMyNTgwLCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstgk:MutoPsvjHMGMt012iLJ7AEdDkGtzAmtWnQMkPK_ceyw,29,3480000.0,5.024,10000,False,5,Medium,70.0,0.0,0.0,1
+xfive,AU,"Hawthorn, Australia",https://www.xfive.co%3Futm_campaign%3D305765621-CLUTCH_Q1-Q2-26%26utm_source%3Dclutch.co%26utm_medium%3Dpaid%26utm_content%3Dmain-profile,50,6000000.0,5.059,25000,False,5,Medium,70.0,0.0,0.0,1
+WP Creative,AU,"Ultimo, Australia",https://wpcreative.com.au/clutch-top-rated-wordpress-agency/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.024,10000,False,5,Medium,70.0,0.0,0.0,1
+Chromatix,AU,"Camberwell, Australia",https://www.chromatix.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,5.012,5000,False,5,Medium,30.0,0.0,0.0,1
+DianApps,AU,"Tarneit, Australia",https://dianapps.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.879,5000,False,5,Medium,10.0,50.0,0.0,0
+Luminary,AU,"Brisbane City, Australia",https://www.luminary.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,6,720000.0,4.81,25000,False,3,Medium,20.0,10.0,10.0,0
+Incipient Infotech,AU,"Klemzig, Australia",https://incipientinfo.tech%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,5.017,1000,False,5,Medium,25.0,0.0,30.0,1
+Labrys,AU,"Milton, Australia",https://labrys.io/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.011,10000,False,5,Medium,20.0,0.0,0.0,1
+Appetiser,AU,"Bondi Junction, Australia",https://appetiser.com.au/just-build-it/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.824,10000,False,5,Medium,10.0,60.0,0.0,0
+Emote Digital,AU,"Hawthorn, Australia",http://www.emotedigital.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.716,1000,False,5,Medium,10.0,0.0,0.0,1
+Intesols,AU,"Moorabbin, Australia",https://www.intesols.com.au/%3Futm_source%3DOrganic%26utm_medium%3DWeb%26utm_campaign%3DClutch,29,3480000.0,4.924,1000,False,5,Medium,10.0,5.0,0.0,1
+MyWork,AU,"Daisy Hill, Australia",https://mywork.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.512,1000,False,5,Medium,25.0,0.0,0.0,1
+Salt & Fuessel,AU,"South Yarra, Australia",https://www.saltandfuessel.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.815,1000,False,5,Medium,25.0,0.0,0.0,1
+EUX Digital,AU,"Sydney, Australia",https://eux.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,5.03,10000,False,5,Medium,30.0,0.0,0.0,1
+Still Not Scared,AU,"Melbourne, Australia",http://stillnotscared.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.07,5000,False,5,Medium,10.0,0.0,0.0,1
+PixelForce,AU,"Kent Town, Australia",https://pixelforce.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,5.08,50000,False,5,Medium,10.0,50.0,0.0,0
+Ecompapi Digital Agency,AU,"Richmond, Australia",https://ecompapi.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.812,5000,False,5,Medium,20.0,0.0,0.0,1
+BFJ Digital,AU,"Spring Hill, Australia",https://bfj.digital/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.034,1000,False,5,Medium,10.0,0.0,0.0,1
+Sentia,AU,"Sydney, Australia",https://www.sentia.com.au,29,3480000.0,4.86,25000,False,5,Medium,25.0,25.0,0.0,0
+Pixite,AU,"Penrith, Australia",https://pixite.com.au/,29,3480000.0,5.014,5000,False,5,Medium,20.0,0.0,0.0,1
+Devika Creations,AU,"Barangaroo, Australia",https://devika.com,29,3480000.0,5.07,5000,False,5,Medium,15.0,15.0,15.0,1
+Digital Thing,AU,"Eltham, Australia",https://www.digitalthing.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.017,5000,False,5,Medium,35.0,0.0,0.0,1
+Wolf IQ,AU,"Sydney, Australia",https://www.wolfiq.com.au/,29,3480000.0,4.91,5000,False,5,Medium,60.0,0.0,0.0,1
+e intelligence,AU,"Windsor, Australia",https://eintelligenceweb.com/digital-marketing-services-clutch/,23,2760000.0,4.926,1000,False,3,Medium,10.0,0.0,0.0,1
+Bearplus,AU,"Sydney, Australia",https://www.bear.plus%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.918,10000,False,5,Medium,50.0,0.0,0.0,1
+Magora,AU,"Sydney, Australia",https://magora-systems.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,17,2040000.0,4.77,25000,False,3,Medium,15.0,0.0,30.0,1
+Top Remotely,AU,"Melbourne, Australia",https://topremotely.com/,29,3480000.0,5.089,5000,False,5,Medium,10.0,0.0,10.0,1
+Fingent,AU,"Melbourne, Australia",https://www.fingent.com/custom-software-development/%3Futm_source%3Dclutch%26utm_medium%3Dreferral%26utm_campaign%3Dprofile,29,3480000.0,4.965,25000,False,5,Medium,10.0,10.0,50.0,1
+INSIDEA,AU,"Balmain, Australia",https://insidea.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.054,1000,False,5,Medium,10.0,0.0,0.0,1
+Warp Development,AU,"Adelaide, Australia",https://www.warpdevelopment.com/offshore-software-development/,29,3480000.0,4.922,25000,False,5,Medium,10.0,10.0,45.0,1
+Logical Wings Infoweb Private Limited,AU,"Point Cook, Australia",http://www.logicalwings.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,3,360000.0,5.03,1000,False,3,Medium,25.0,25.0,0.0,0
+Shaligram Infotech,AU,"Brisbane City, Australia",https://shaligraminfotech.com%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,4.961,5000,False,5,Medium,35.0,0.0,45.0,1
+Skynet Technologies,AU,"Melbourne, Australia",https://www.skynettechnologies.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,1,120000.0,5.01,5000,False,3,Medium,20.0,0.0,0.0,1
+Soto Group,AU,"Brisbane City, Australia",http://www.sotogroup.co/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.95,5000,False,5,Medium,10.0,0.0,0.0,1
+Greenhat,AU,"Fortitude Valley, Australia",https://www.greenhat.net/,29,3480000.0,5.02,10000,False,5,Medium,30.0,10.0,0.0,1
+Wave Digital,AU,"North Melbourne, Australia",http://wavedigital.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral,29,3480000.0,4.97,10000,False,5,Medium,20.0,60.0,0.0,0
+DreamWalk App Development,AU,"Paddington, Australia",https://dreamwalk.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,23,2300000.0,4.415,25000,False,1,Medium,10.0,70.0,0.0,0
+Business Warriors | Digital Marketing Agency,AU,"Perth, Australia",https://businesswarriors.global%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,3480000.0,5.03,1000,False,5,Medium,10.0,0.0,0.0,1
+White Peak Digital,AU,"Melbourne, Australia",https://www.whitepeakdigital.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,10,1200000.0,5.01,5000,False,3,Medium,40.0,0.0,0.0,1
+Shtudio,AU,"Woollahra, Australia",https://www.shtudio.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,5.03,5000,False,5,Medium,50.0,0.0,0.0,1
+Rock Agency,AU,"Cremorne, Australia",https://rockagency.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,10000,False,3,Medium,25.0,0.0,0.0,3
+Vivo Group,AU,"Newstead, Australia",https://www.vivogroup.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,2900000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+Synoviq,AU,"Melbourne, Australia",https://synoviq.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,16,1920000.0,5.06,1000,False,3,Medium,10.0,5.0,5.0,1
+Arcanys,AU,"Camberwell, Australia",http://www.arcanys.com/%3Futm_source%3Dclutch%26utm_medium%3Dreferral,4,480000.0,5.027,100000,False,3,Medium,30.0,0.0,40.0,1
+RailsFactory,AU,"Melbourne, Australia",https://railsfactory.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,2900000.0,0.0,10000,False,3,Medium,10.0,10.0,25.0,3
+Task Virtual,AU,"Sydney, Australia",https://taskvirtual.com%3Fref%3DClutch.co%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,3480000.0,4.954,1000,False,5,Medium,10.0,0.0,0.0,1
+CBTW APAC,AU,"Melbourne, Australia",https://collaborationbetterstheworld.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,1,120000.0,4.73,0,False,3,Medium,10.0,10.0,30.0,0
+Intuji,AU,"Perth, Australia",https://intuji.com/get-in-touch/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+Enterprise Monkey,AU,"Melbourne, Australia",https://enterprisemonkey.com.au%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,5000,False,3,Medium,35.0,0.0,0.0,3
+Stone Digital,AU,"Pyrmont, Australia",https://stonedigital.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,5000,False,3,Medium,50.0,0.0,0.0,3
+StartupCraft,AU,"Sydney, Australia",http://startupcraft.io/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,2900000.0,0.0,25000,False,3,Medium,35.0,0.0,0.0,3
+Idea Box,AU,"Chippendale, Australia",https://ideabox.com.au/,29,2900000.0,0.0,25000,False,3,Medium,30.0,0.0,0.0,3
+Launchpad App Development,AU,"Richmond, Australia",http://www.launchpadapps.co%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,10000,False,3,Medium,10.0,0.0,0.0,3
+Croissant & Baguette,AU,"Sydney, Australia",https://croissantbaguette.com.au/,29,2900000.0,0.0,10000,False,3,Medium,40.0,0.0,0.0,3
+Butterfly,AU,"Melbourne, Australia",http://www.butterfly.com.au/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,2900000.0,0.0,10000,False,3,Medium,30.0,0.0,0.0,3
+Airteam,AU,"Pyrmont, Australia",https://www.airteam.com.au/landing-page/web-development-company%3Futm_source%3Dclutch%26utm_medium%3Dorganic%26utm_campaign%3Dclutch-profile%26utm_term%3Dlogo%26utm_content%3Dimage,29,2900000.0,0.0,10000,False,3,Medium,20.0,0.0,0.0,3
+Jhavtech Studios,AU,"Melbourne, Australia",https://www.jhavtech.com.au/,29,2900000.0,0.0,10000,False,3,Medium,15.0,0.0,0.0,3
+Nuclieos,AU,"Melbourne, Australia",https://www.nuclieos.com/,29,2900000.0,0.0,5000,False,3,Medium,20.0,0.0,0.0,3
+Seriously Good Design,AU,"Hawthorn East, Australia",https://sgd.com.au,29,2900000.0,0.0,5000,False,3,Medium,30.0,0.0,0.0,3
+Kombee Private Limited,AU,"Boronia, Australia",https://www.kombee.com/in,29,2900000.0,0.0,10000,False,3,Medium,25.0,0.0,0.0,3
+Mainstay Digital,AU,"Geelong, Australia",https://mainstay.digital/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dau-web-developers,29,2900000.0,0.0,5000,False,3,Medium,30.0,0.0,0.0,3
+Appello Software,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjBkNTU0NWUxLWI0ZmQtNDlhOC04MDA0LTliYTJmYzZhNThlMyIsImltcHJlc3Npb25faWQiOiI1YjlkOTZiYS1jOGFiLTRhNTQtOThmOC05ZDlhNWIyYzQyYjMiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzYyMTgsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstgv:a08x6gMRoOMr_BQxolK1-hjfzofaYxOqZS-hc4c6_9I,29,3480000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Innowise,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjBkNTU0NWUxLWI0ZmQtNDlhOC04MDA0LTliYTJmYzZhNThlMyIsImltcHJlc3Npb25faWQiOiI1NGFmMWNmZi1lMDZkLTRkNWYtYjNiZS05M2MyMTE1MWVhZDMiLCJwcm92aWRlcl9pZCI6NDc3NjUzLCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzk1OTgsInBvc2l0aW9uIjoyLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vstgv:R_xun2cGcfHWtiwTw-kNuV2venfaSWx9vfG1VgPJPbI,1,120000.0,4.972,10000,False,3,Medium,10.0,10.0,10.0,0
+WP Creative,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjBkNTU0NWUxLWI0ZmQtNDlhOC04MDA0LTliYTJmYzZhNThlMyIsImltcHJlc3Npb25faWQiOiJkZGVlMDAyZS0wNDU4LTQzOTQtYjA0Yi0yYmM4Y2ZhOWQ2OWIiLCJwcm92aWRlcl9pZCI6MTY5MDQyMSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6NDU4LCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzMyNTgwLCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vstgv:ZGn4VQ6NAuywbqSrnYFAn3ww8Jx3cFoAThxLP8edahY,29,3480000.0,5.024,10000,False,5,Medium,70.0,0.0,0.0,1
+Intuji,AU,"Brisbane City, Australia",,8,960000.0,4.924,10000,False,3,Medium,40.0,5.0,0.0,1
+Enterprise Monkey,AU,"Geelong, Australia",,50,6000000.0,5.062,5000,False,5,Medium,35.0,15.0,35.0,1
+Stone Digital,AU,"Pyrmont, Australia",,29,3480000.0,5.024,5000,False,5,Medium,50.0,0.0,0.0,1
+StartupCraft,AU,"Sydney, Australia",,29,3480000.0,5.023,25000,False,5,Medium,35.0,0.0,0.0,1
+Idea Box,AU,"Chippendale, Australia",,29,3480000.0,4.812,25000,False,5,Medium,30.0,35.0,0.0,0
+Launchpad App Development,AU,"Richmond, Australia",,29,3480000.0,5.026,10000,False,5,Medium,10.0,70.0,0.0,0
+Croissant & Baguette,AU,"Sydney, Australia",,29,3480000.0,5.04,10000,False,5,Medium,40.0,10.0,0.0,1
+Butterfly,AU,"Melbourne, Australia",,29,3480000.0,5.07,10000,False,5,Medium,30.0,0.0,0.0,1
+Airteam,AU,"Pyrmont, Australia",,29,3480000.0,5.02,10000,False,5,Medium,20.0,20.0,20.0,1
+Jhavtech Studios,AU,"Melbourne, Australia",,29,3480000.0,4.823,10000,False,5,Medium,15.0,40.0,0.0,0
+Nuclieos,AU,"Melbourne, Australia",,29,3480000.0,4.86,5000,False,5,Medium,20.0,0.0,30.0,1
+Seriously Good Design,AU,"Hawthorn East, Australia",,29,3480000.0,5.01,5000,False,5,Medium,30.0,0.0,0.0,1
+Kombee Private Limited,AU,"Boronia, Australia",,29,3480000.0,5.04,10000,False,5,Medium,25.0,50.0,0.0,0
+Mainstay Digital,AU,"Geelong, Australia",,29,3480000.0,4.83,5000,False,5,Medium,30.0,0.0,45.0,1
+Itomic,AU,"Perth, Australia",,29,3480000.0,5.05,5000,False,5,Medium,30.0,20.0,10.0,1
+UPCORE,AU,"Barangaroo, Australia",,29,3480000.0,5.03,10000,False,5,Medium,10.0,70.0,0.0,0
+Nightjar,AU,"Surry Hills, Australia",,29,3480000.0,5.02,25000,False,5,Medium,30.0,10.0,15.0,1
+Designpluz,AU,"Bella Vista, Australia",,29,3480000.0,4.96,1000,False,5,Medium,20.0,15.0,20.0,1
+Digiwhiz,AU,"Moorabbin, Australia",,29,3480000.0,4.51,1000,False,5,Medium,30.0,0.0,0.0,1
+Moonward Studio,AU,"Baulkham Hills, Australia",,29,3480000.0,4.721,10000,False,5,Medium,10.0,90.0,0.0,0
+Rush Hour Digital,AU,"Sydney, Australia",,29,3480000.0,4.88,25000,False,5,Medium,15.0,0.0,0.0,1
+Appinop Technologies,AU,"Cannon Hill, Australia",,50,6000000.0,4.921,5000,False,5,Medium,10.0,40.0,0.0,0
+Redi Software,AU,"Joondalup, Australia",,29,3480000.0,5.02,25000,False,5,Medium,30.0,30.0,40.0,0
+Noorix - Custom Software and App Developers,AU,"Sydney, Australia",,29,3480000.0,4.96,25000,False,5,Medium,25.0,0.0,30.0,1
+Carbon Edge Australia,AU,"Chadstone, Australia",,33,3960000.0,4.97,5000,False,5,Medium,30.0,0.0,0.0,1
+AndMine,AU,"Melbourne, Australia",,29,3480000.0,5.01,5000,False,5,Medium,20.0,0.0,0.0,1
+VT Digital,AU,"Sydney, Australia",,29,3480000.0,5.025,1000,False,5,Medium,20.0,30.0,0.0,0
+Clean Commit,AU,"Barton, Australia",,29,3480000.0,5.012,10000,False,5,Medium,10.0,0.0,10.0,1
+Drive Digital,AU,"Footscray, Australia",,42,5040000.0,5.04,10000,False,5,Medium,20.0,0.0,0.0,1
+Relab Studios,AU,"Cremorne, Australia",,29,3480000.0,5.05,5000,False,5,Medium,10.0,0.0,0.0,1
+Aussie Website,AU,"Melbourne, Australia",,29,3480000.0,5.01,1000,False,5,Medium,35.0,0.0,0.0,1
+"XAM5.01
+                        
+                            review",AU,"Brisbane City, Australia",,21,2520000.0,5.01,10000,False,3,Medium,20.0,20.0,10.0,0
+Zuse Digital,AU,"Melbourne, Australia",,29,3480000.0,5.01,10000,False,5,Medium,25.0,25.0,0.0,0
+GREENLOGIC,AU,"St Kilda, Australia",,29,3480000.0,4.94,25000,False,5,Medium,20.0,0.0,20.0,1
+Fluid Branding,AU,"South Melbourne, Australia",,100,12000000.0,4.82,25000,False,5,Medium,10.0,0.0,0.0,2
+Frank Digital,AU,"Melbourne, Australia",,26,3120000.0,5.01,50000,False,5,Medium,40.0,0.0,0.0,1
+MadAppGang,AU,"Maroubra, Australia",,29,3480000.0,5.08,25000,False,5,Medium,30.0,20.0,0.0,1
+Atlasopen,AU,"Fitzroy, Australia",,29,3480000.0,4.812,25000,False,5,Medium,15.0,0.0,40.0,1
+DigiGround,AU,"Sydney, Australia",,29,3480000.0,4.94,5000,False,5,Medium,30.0,70.0,0.0,0
+Pixelstorm,AU,"Cremorne, Australia",,29,3480000.0,4.94,5000,False,5,Medium,30.0,0.0,0.0,1
+Hyper Startup Studio,AU,"Bondi Beach, Australia",,29,3480000.0,4.921,5000,False,5,Medium,20.0,40.0,10.0,0
+Attalla Digital,AU,"Melbourne, Australia",,29,3480000.0,5.05,25000,False,5,Medium,10.0,30.0,0.0,0
+Slant Digital Pty Ltd,AU,"Highton, Australia",,29,3480000.0,5.01,5000,False,5,Medium,15.0,2.0,5.0,1
+Vesanique,AU,"Fortitude Valley, Australia",,29,3480000.0,5.02,5000,False,5,Medium,10.0,0.0,0.0,1
+Baha Agency,AU,"Braddon, Australia",,29,3480000.0,5.06,25000,False,5,Medium,10.0,10.0,0.0,1
+Supportsoft Technologies,AU,"Rosehill, Australia",,29,3480000.0,4.837,5000,False,5,Medium,20.0,30.0,0.0,0
+JUSTPRO,AU,"Parramatta, Australia",,29,3480000.0,5.07,0,False,5,Medium,10.0,10.0,15.0,1
+Appomate,AU,"Melbourne, Australia",,29,2900000.0,4.316,25000,False,3,Medium,10.0,0.0,20.0,1
+Newpath Web,AU,"Melbourne, Australia",,29,3480000.0,4.73,0,False,5,Medium,40.0,0.0,0.0,1
+SLIK,AU,"Redfern, Australia",,29,3480000.0,5.01,25000,False,5,Medium,10.0,0.0,0.0,1
+Appello Software,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImIzOTgzZmMyLWE0MzYtNDliZS04ZjNiLTcxZWM4ZjIwMzYzMiIsImltcHJlc3Npb25faWQiOiJiNzA4Mzk2NS0zY2U2LTRhYzItOGFiOS0yNWQ2NWMyZDgxY2UiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzYyMTgsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsth5:68wg0lh1YjJHw1w5wX_M3405pmv04H_XBdvL8gK5Mo4,29,3480000.0,4.933,50000,False,5,Medium,10.0,55.0,35.0,0
+Innowise,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImIzOTgzZmMyLWE0MzYtNDliZS04ZjNiLTcxZWM4ZjIwMzYzMiIsImltcHJlc3Npb25faWQiOiJjYWY2NzI0NS1jYjQwLTRkMjctYmY4MS01NTMwMjUxY2M4MDUiLCJwcm92aWRlcl9pZCI6NDc3NjUzLCJmZWF0dXJlZF9saXN0aW5nX2lkIjo0NTgsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzk1OTgsInBvc2l0aW9uIjoyLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsth5:2nyRopWLLTw93S1Ub1X9-6PDEIkfAUTwG8r0IQss1wg,1,120000.0,4.972,10000,False,3,Medium,10.0,10.0,10.0,0
+WP Creative,AU,Serves Australia,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6ImIzOTgzZmMyLWE0MzYtNDliZS04ZjNiLTcxZWM4ZjIwMzYzMiIsImltcHJlc3Npb25faWQiOiI3MmVlZmZkNi1jODRmLTRjMmUtOWFlYi03NTk0YWJiNDZiMmYiLCJwcm92aWRlcl9pZCI6MTY5MDQyMSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6NDU4LCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzMyNTgwLCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsth5:OYLdchlMxec1RHUkKKESzopcKaCz5CxlcgqgKqpEtlA,29,3480000.0,5.024,10000,False,5,Medium,70.0,0.0,0.0,1
+Sonder Digital Marketing,AU,"Newstead, Australia",,29,3480000.0,5.02,5000,False,5,Medium,30.0,0.0,0.0,1
+Aston Social,AU,"Melbourne, Australia",,29,3480000.0,5.03,1000,False,5,Medium,15.0,0.0,0.0,1
+Studio Moso,AU,"South Melbourne, Australia",,29,3480000.0,5.02,10000,False,5,Medium,30.0,0.0,0.0,1
+Refuel Creative,AU,"Port Adelaide, Australia",,29,3480000.0,5.01,5000,False,5,Medium,20.0,0.0,0.0,1
+Cherrypick Agency,AU,"Blacktown, Australia",,29,3480000.0,5.012,10000,False,5,Medium,10.0,15.0,10.0,1
+victoria IT,AU,"Tarneit, Australia",,29,3480000.0,5.01,5000,False,5,Medium,20.0,0.0,0.0,1
+Blitzm Systems Pty Ltd,AU,"Canberra, Australia",,22,2640000.0,5.01,10000,False,3,Medium,15.0,0.0,10.0,1
+Fgfactory Australia,AU,"Bentleigh East, Australia",,29,3480000.0,5.01,10000,False,5,Medium,30.0,35.0,35.0,0
+The Interaction Consortium,AU,"Chippendale, Australia",,29,3480000.0,4.83,25000,False,5,Medium,75.0,5.0,0.0,1
+We Make Apps,AU,"Collingwood, Australia",,29,3480000.0,5.01,25000,False,5,Medium,10.0,50.0,0.0,0
+Y Interval,AU,"Bankstown, Australia",,29,3480000.0,5.01,5000,False,5,Medium,20.0,35.0,0.0,0
+iGeekTeam,AU,"Sydney, Australia",,29,3480000.0,4.83,1000,False,5,Medium,30.0,40.0,0.0,0
+BSO Digital,AU,"Moonee Ponds, Australia",,29,3480000.0,5.01,5000,False,5,Medium,50.0,0.0,0.0,1
+theAD - Sydney's Digital Agency,AU,"Ultimo, Australia",,29,2900000.0,4.27,1000,False,3,Medium,30.0,30.0,0.0,0
+App Boxer,AU,"Baulkham Hills, Australia",,29,2900000.0,3.77,10000,False,3,Medium,10.0,90.0,0.0,0
+Snapio Pty Ltd,AU,"Brendale, Australia",,29,3480000.0,4.82,5000,False,5,Medium,20.0,0.0,30.0,1
+Up & Gro,AU,"Melbourne, Australia",,29,3480000.0,5.07,1000,False,5,Medium,25.0,15.0,0.0,1
+Metrix,AU,"Morningside, Australia",,29,3480000.0,5.02,100000,False,5,Medium,20.0,0.0,10.0,1
+Creative Click,AU,"Sydney, Australia",,29,3480000.0,5.01,5000,False,5,Medium,50.0,0.0,0.0,1
+KDM Digital Marketing,AU,"Fortitude Valley, Australia",,29,3480000.0,5.03,1000,False,5,Medium,10.0,0.0,0.0,1
+Team-X Web Development and SEO,AU,"Doncaster, Australia",,29,3480000.0,5.01,0,False,5,Medium,50.0,0.0,0.0,1
+The Digital Embassy,AU,"Adelaide, Australia",,29,3480000.0,5.02,25000,False,5,Medium,30.0,10.0,0.0,1
+Convert Studios,AU,"Perth, Australia",,29,3480000.0,5.01,25000,False,5,Medium,10.0,0.0,0.0,1
+MRU Consulting,AU,"Brisbane City, Australia",,29,3480000.0,5.03,5000,False,5,Medium,20.0,10.0,50.0,1
+Pounce Agency,AU,"Sydney, Australia",,29,3480000.0,4.97,5000,False,5,Medium,20.0,0.0,0.0,1
+Digitalrooar,AU,"Liverpool, Australia",,29,3480000.0,5.02,1000,False,5,Medium,15.0,0.0,0.0,1
+Spring Web Solutions,AU,"Shenton Park, Australia",,29,3480000.0,4.52,0,False,5,Medium,30.0,0.0,0.0,1
+Adonis Media,AU,"Brisbane City, Australia",,29,3480000.0,5.06,10000,False,5,Medium,20.0,0.0,10.0,1
+The Code Company Pty Ltd,AU,"Brisbane City, Australia",,29,3480000.0,4.51,50000,False,5,Medium,70.0,0.0,0.0,1
+Horizon Labs,AU,"Prahran, Australia",,29,3480000.0,5.02,0,False,5,Medium,40.0,50.0,0.0,0
+NOVORIUM,AU,"Chippendale, Australia",,29,3480000.0,5.03,5000,False,5,Medium,25.0,10.0,0.0,1
+DDSN Interactive,AU,"South Melbourne, Australia",,29,3480000.0,4.86,1000,False,5,Medium,20.0,20.0,20.0,1
+Major Creative,AU,"Chadstone, Australia",,29,3480000.0,5.01,10000,False,5,Medium,35.0,0.0,0.0,1
+TechDilation,AU,"West Perth, Australia",,29,3480000.0,5.06,5000,False,5,Medium,15.0,30.0,0.0,0
+Laneways Software and Digital Pty Ltd,AU,"Port Melbourne, Australia",,29,3480000.0,5.02,25000,False,5,Medium,10.0,10.0,10.0,1
+Web Doodle,AU,"Seven Hills, Australia",,29,3480000.0,5.01,1000,False,5,Medium,20.0,5.0,10.0,1
+SCSS Consulting,AU,"Surry Hills, Australia",,29,3480000.0,5.06,10000,False,5,Medium,45.0,0.0,25.0,1
+applickable,AU,"Collingwood, Australia",,50,6000000.0,4.65,0,False,5,Medium,30.0,30.0,0.0,1
+Quadque Technologies Limited,AU,"Bankstown, Australia",,29,3480000.0,5.02,0,False,5,Medium,15.0,0.0,10.0,1
+Folio Manager,AU,"Brisbane, Australia",,29,3480000.0,5.03,1000,False,5,Medium,20.0,0.0,1.0,1
+Sydney Digital Agency,AU,"Potts Point, Australia",,29,3480000.0,5.04,5000,False,5,Medium,10.0,0.0,0.0,1
+X2hundred,AU,"Bankstown, Australia",,29,3480000.0,5.01,1000,False,5,Medium,35.0,15.0,0.0,1
+Empite,AU,"Mulgrave, Australia",,29,3480000.0,5.03,10000,False,5,Medium,25.0,25.0,25.0,0
+ITC Group,AU,"Belmore, Australia",,18,2160000.0,4.83,10000,False,3,Medium,10.0,10.0,35.0,1
+Perth Digital Edge,AU,"Wanneroo, Australia",,29,3480000.0,5.02,1000,False,5,Medium,20.0,0.0,0.0,1
+Digital Eagles Marketing Agency,AU,"Melbourne, Australia",,50,6000000.0,5.03,1000,False,5,Medium,10.0,0.0,0.0,1
+Upscalix,AU,"Melbourne, Australia",,29,3480000.0,5.02,5000,False,5,Medium,10.0,10.0,10.0,1
+4mation Technologies,AU,"Surry Hills, Australia",,29,3480000.0,5.01,10000,False,5,Medium,10.0,10.0,10.0,1
+Platinum SEO,AU,"Kew, Australia",,29,3480000.0,5.01,1000,False,5,Medium,30.0,0.0,0.0,1
+ISH Technologies,AU,"Brisbane City, Australia",,100,12000000.0,4.82,25000,False,5,Medium,25.0,0.0,15.0,2
+CubeZoo,SA,"Johannesburg, South Africa",https://www.cubezoo.co.za/project-kickoff/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dza-web-developers,29,2436000.0,4.931,10000,False,4,Medium,20.0,30.0,15.0,0
+Coherent Solutions,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiIzNjE0MGY2YS1lN2RhLTQ2OTAtOTMxZC1jM2RiY2E3MmY2NmUiLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthK:fzrVdeuLfPa2uIWx8GjM_IK4GjuAZwqQkSJAFhJ2OMY,14,1176000.0,4.73,50000,False,2,Medium,15.0,0.0,0.0,3
+Proven,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJmYjJiM2Q0OS04NDM0LTQwYTgtYjQzNC0yZTRmMWU3ZmQ2YTYiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthK:UB0e0SWrwRqX88F5nK070qbVkKT54WL1jchwFMPN0sI,29,2436000.0,4.912,25000,False,4,Medium,25.0,0.0,10.0,1
+Storm Brain,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJlZGI1NGUwYi0xOGJjLTQ0YzctYTZmYy02Njk0ODNkMmQ1NmEiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthK:qevuHthNhLn1N_Kv2kcfDRGgsq0KhAvaXf6iqowaNxE,29,2436000.0,5.0124,10000,False,4,Medium,40.0,0.0,0.0,1
+Brave Digital,SA,"Cape Town, South Africa",https://www.bravedigital.com/development/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dza-web-developers,29,2436000.0,4.88,10000,False,4,Medium,50.0,0.0,20.0,1
+Origen Software,SA,"Cape Town, South Africa",https://origensoftware.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dza-web-developers,29,2436000.0,5.024,25000,False,4,Medium,30.0,40.0,0.0,0
+DRUM'N'CODE,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiIxYjFiYWU0My1iOWQ2LTRmMmEtYjgxOC1jNTc5MTc2ODM3MGQiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthK:FZqMZo0-ngv515dkvY95i4eH5KDT-zXCNIhMqqBWBYE,29,2436000.0,5.025,1000,False,4,Medium,30.0,10.0,30.0,1
+Appunite,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiI4YjllMDUyYS0xM2M1LTQyNzctYmZhMS1mN2I4YzVjY2Y1ODIiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthK:QBEXowL1MFyxH2TYq5lky-_AoSFKronj0HFlW96E32w,29,2436000.0,4.921,10000,False,4,Medium,20.0,0.0,20.0,1
+TKX Media,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiIxNGRmODUzZS1iMzE4LTQzOGMtODg4Yy03MmNlZDVlMDc0ODkiLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthK:znHDljNq2ZTCuB0Fv-hXXSHLnzFtZSIREppEz1OWNRI,29,2436000.0,5.011,5000,False,4,Medium,40.0,0.0,0.0,1
+Modern Day Strategy,SA,"Cape Town, South Africa",https://www.moderndaystrategy.com,29,2436000.0,5.028,1000,False,4,Medium,20.0,30.0,10.0,0
+Clickmod,SA,"Centurion, South Africa",https://www.clickmod.co.za,29,2436000.0,4.73,25000,False,4,Medium,20.0,20.0,35.0,0
+Agile Routes,SA,"Randburg, South Africa",https://agileroutes.com/,29,2436000.0,5.09,5000,False,4,Medium,75.0,0.0,10.0,1
+WEBINK,SA,"Sandton, South Africa",https://webink.agency,29,2436000.0,4.95,1000,False,4,Medium,10.0,0.0,0.0,1
+Geniusee,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJhYTQ4ZWNlNS02YTE0LTQ3NzUtODI0My1kMzliYjU4ZDlhN2MiLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthK:FgzzGEl5Vyh9o6IGk95L_oyb78gi_8Z-KjMUzyuFBmw,14,1176000.0,5.067,50000,False,2,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJmNmFjZThiYS04OWY5LTQ4NDYtYTdjYS0xMGI0ZTQxNWE2YzciLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthK:LrhsRz1jzaMS_mjwNi_sDqUhdebgR5msG2HmHok27r0,29,2436000.0,4.937,10000,False,4,Medium,35.0,41.0,0.0,0
+Arounda,SA,Completed projects in 19 countries,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiIzMThiNjk5OC1hZjBkLTRjOGMtYjU4ZC01OWNlOTA1YmRkYmMiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthK:kfdnkkSkewUGOkoNsH00Eaj0wLs_ulb8pNIWRRk4Wzk,29,2436000.0,5.072,25000,False,4,Medium,30.0,0.0,0.0,1
+Decode Development,SA,"Cape Town, South Africa",https://www.decodedev.com/,29,2436000.0,5.01,5000,False,4,Medium,30.0,0.0,0.0,1
+SovTech,SA,"Cape Town, South Africa",,29,2030000.0,4.17,10000,False,2,Medium,30.0,30.0,0.0,0
+Dev Technosys,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiIwYjlmYzhmNC1hOTgwLTRmNGItOWY2YS1iZGE3MDI4MDk4YjMiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthK:ZS44QUD4UHySUXZB5DbnEeku1sG_iQyTZ2tlfNQFAOY,100,8400000.0,4.8201,10000,False,4,Medium,10.0,35.0,0.0,2
+Rekos Agency,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJhYzliMTkzMi01YTFmLTRiY2UtYWE3Yy0zNjI1YjIwZGUxNzIiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthK:sdUG_ueXb6SFv58ci-8aF6PnWDxdagF2KWl7qcFUsvg,29,2436000.0,4.926,5000,False,4,Medium,30.0,0.0,0.0,1
+Appello Software,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiJiODE1ODZlZS1kNGU2LTQ4YTItOGMwYi1kM2NmNWViODgwYzMiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthK:-MAQ5CpKlg-NtHyGbBeKyoUvf1XcId_afvrClXdzO_s,33,2772000.0,4.933,50000,False,4,Medium,10.0,55.0,35.0,0
+Elemental,SA,"Cape Town, South Africa",,29,2436000.0,4.53,5000,False,4,Medium,60.0,0.0,40.0,1
+Liorra Tech,SA,"Cape Town, South Africa",,3,252000.0,4.97,10000,False,2,Medium,25.0,30.0,0.0,0
+Read more,SA,South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiI4ZWE3Y2M5Yy03ZjVmLTRmMGMtYjBhOS01Zjc0MmMwODVkYWIiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthK:sURWkLxWTvwXEfto1y41DsG2wf9UyUTVzYYuwILdiUo,29,2030000.0,0.0,10000,False,2,Medium,20.0,20.0,0.0,3
+ExpandX,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjNhMjU2ZGZiLTBhNzMtNGM5YS1hYjJlLTFiZjM3YWViMGMwNCIsImltcHJlc3Npb25faWQiOiI4YjJkZjY2MC1iMzNjLTRkYTYtYWEwMS1hZGUyZDliYWM3MmIiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthK:038P8fBzT2pA4jBAIRntqGn0tsQIPCMjAQhrW_WYsEs,29,2436000.0,5.066,10000,False,4,Medium,30.0,0.0,0.0,1
+Haefele Software,SA,"Cape Town, South Africa",,29,2436000.0,4.812,10000,False,4,Medium,10.0,5.0,40.0,1
+Bluebird Technologies,SA,"Johannesburg, South Africa",,29,2436000.0,5.04,5000,False,4,Medium,30.0,0.0,20.0,1
+Melsoft,SA,"Johannesburg, South Africa",,29,2436000.0,4.824,1000,False,4,Medium,20.0,0.0,20.0,1
+Softserve Digital Development,SA,"Edenvale, South Africa",,29,2436000.0,5.03,5000,False,4,Medium,16.0,0.0,24.0,1
+TypeDev.io,SA,"Cape Town, South Africa",,26,2184000.0,5.01,10000,False,4,Medium,10.0,10.0,15.0,1
+Scrums.com,SA,"Randburg, South Africa",,100,8400000.0,5.02,25000,False,4,Medium,20.0,20.0,0.0,2
+BluShift Consulting,SA,"Cape Town, South Africa",,50,4200000.0,4.94,1000,False,4,Medium,25.0,35.0,0.0,0
+Web SEM Online,SA,"Cape Town, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,20.0,0.0,0.0,1
+CRT Digital,SA,"George, South Africa",,29,2436000.0,4.83,1000,False,4,Medium,25.0,10.0,0.0,1
+Helios Design,SA,"Johannesburg, South Africa",,29,2436000.0,5.03,0,False,4,Medium,40.0,0.0,0.0,1
+SyberGrupe,SA,"Randburg, South Africa",,29,2436000.0,5.05,1000,False,4,Medium,10.0,5.0,1.0,1
+AUX Studio,SA,"Cape Town, South Africa",,29,2436000.0,4.84,25000,False,4,Medium,25.0,25.0,0.0,0
+Vegatech,SA,"Cape Town, South Africa",,29,2436000.0,5.012,1000,False,4,Medium,20.0,0.0,0.0,1
+Bermont,SA,"Cape Town, South Africa",,29,2436000.0,5.07,1000,False,4,Medium,15.0,0.0,20.0,1
+Mut-Con (Pty) Ltd,SA,"Johannesburg, South Africa",,29,2436000.0,4.91,0,False,4,Medium,10.0,0.0,0.0,1
+Terra Digital,SA,"Cape Town, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,25.0,0.0,0.0,1
+Evolvea Systems,SA,"Benoni, South Africa",,29,2436000.0,4.99,10000,False,4,Medium,30.0,0.0,30.0,1
+Moontu Digital Solutions,SA,"Cape Town, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,10.0,30.0,0.0,0
+Pixel Perfect,SA,"Somerset West, South Africa",,29,2436000.0,5.07,5000,False,4,Medium,20.0,0.0,0.0,1
+Fluidity Software Solutions,SA,"Cape Town, South Africa",,100,8400000.0,4.68,25000,False,4,Medium,25.0,0.0,5.0,2
+Versys Media,SA,"Sandton, South Africa",,29,2436000.0,5.03,1000,False,4,Medium,40.0,0.0,0.0,1
+Netgen Custom Software,SA,"Cape Town, South Africa",,59,4956000.0,5.02,1000,False,4,Medium,20.0,0.0,50.0,1
+FUTUREBORN®,SA,"Cape Town, South Africa",,29,2436000.0,4.83,1000,False,4,Medium,10.0,0.0,0.0,1
+PINECONEPIXEL APP DEVELOPMENT (PTY) LTD,SA,"Johannesburg, South Africa",,29,2436000.0,5.01,10000,False,4,Medium,50.0,0.0,50.0,1
+The Delta,SA,"Cape Town, South Africa",,29,2436000.0,4.82,5000,False,4,Medium,10.0,20.0,0.0,0
+Realm Digital,SA,"Cape Town, South Africa",,29,2436000.0,4.64,10000,False,4,Medium,20.0,20.0,20.0,0
+Crockett Produced (Pty) Ltd,SA,"Sandton, South Africa",,29,2436000.0,4.82,1000,False,4,Medium,25.0,0.0,0.0,1
+Octrotus Online Solutions,SA,"Pretoria, South Africa",,29,2436000.0,4.82,5000,False,4,Medium,10.0,50.0,0.0,0
+Adworth,SA,"Cape Town, South Africa",,29,2436000.0,5.01,1000,False,4,Medium,10.0,0.0,0.0,1
+Digital Design Agency Group,SA,"Johannesburg, South Africa",,41,3444000.0,5.03,1000,False,4,Medium,10.0,10.0,0.0,1
+TransformIT Dynamics,SA,"Vanderbijlpark, South Africa",,29,2436000.0,4.82,5000,False,4,Medium,20.0,0.0,10.0,1
+Codenatics,SA,"Cape Town, South Africa",,29,2436000.0,4.52,250000,False,4,Medium,10.0,20.0,30.0,0
+Monkey and River,SA,"Centurion, South Africa",,29,2436000.0,5.01,1000,False,4,Medium,20.0,0.0,20.0,1
+Appstrax Technology,SA,"Cape Town, South Africa",,50,4200000.0,5.02,10000,False,4,Medium,20.0,0.0,30.0,1
+Kaitech (Pty) Ltd,SA,"Pretoria, South Africa",,29,2436000.0,4.83,1000,False,4,Medium,35.0,0.0,0.0,1
+The Mail Exchange CC,SA,"Cape Town, South Africa",,29,2436000.0,5.02,0,False,4,Medium,30.0,0.0,0.0,1
+Thought Inc.,SA,"Johannesburg, South Africa",,29,2436000.0,4.51,5000,False,4,Medium,30.0,30.0,10.0,0
+BNRY Digital,SA,"Cape Town, South Africa",,71,5964000.0,5.01,25000,False,4,Medium,20.0,0.0,0.0,1
+SovTech,SA,"Randburg, South Africa",https://www.sovtech.com,29,2030000.0,0.0,10000,False,2,Medium,30.0,0.0,0.0,3
+Elemental,SA,"Cape Town, South Africa",https://www.elemental.agency/,29,2030000.0,0.0,5000,False,2,Medium,60.0,0.0,0.0,3
+Liorra Tech,SA,"Cape Town, South Africa",https://www.liorra.io/book-a-call%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Dza-web-developers,29,2030000.0,0.0,10000,False,2,Medium,25.0,0.0,0.0,3
+Haefele Software,SA,"Cape Town, South Africa",http://www.haefelesoftware.com/%3Futm_source%3Dclutch.co%26utm_medium%3Dreferral%26utm_campaign%3Ddirectory,29,2030000.0,0.0,10000,False,2,Medium,10.0,0.0,0.0,3
+Bluebird Technologies,SA,"Austin, TX",https://bluebird.tech,29,2030000.0,0.0,5000,False,2,Medium,30.0,0.0,0.0,3
+Melsoft,SA,"Johannesburg, South Africa",https://melsoft.io,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+Softserve Digital Development,SA,"Edenvale, South Africa",https://www.softserve.co.za,29,2030000.0,0.0,5000,False,2,Medium,16.0,0.0,0.0,3
+TypeDev.io,SA,"Centurion, South Africa",https://typedev.io,29,2030000.0,0.0,10000,False,2,Medium,10.0,0.0,0.0,3
+Scrums.com,SA,"New York, NY",https://www.scrums.com,29,2030000.0,0.0,25000,False,2,Medium,20.0,0.0,0.0,3
+BluShift Consulting,SA,"Johannesburg, South Africa",https://blushift.co.za,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Web SEM Online,SA,"Cape Town, South Africa",https://websem.io/,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+CRT Digital,SA,"George, South Africa",https://www.crtdigital.co.za/,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Helios Design,SA,"Johannesburg, South Africa",https://www.heliosdesign.com,29,2030000.0,0.0,0,False,2,Medium,40.0,0.0,0.0,3
+SyberGrupe,SA,"Randburg, South Africa",https://www.sybergrupe.com,29,2030000.0,0.0,1000,False,2,Medium,10.0,0.0,0.0,3
+AUX Studio,SA,"Cape Town, South Africa",https://aux.studio/,29,2030000.0,0.0,25000,False,2,Medium,25.0,0.0,0.0,3
+Vegatech,SA,"Cape Town, South Africa",https://vegatech.co.za/,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+Bermont,SA,"Cape Town, South Africa",https://bermont.digital,29,2030000.0,0.0,1000,False,2,Medium,15.0,0.0,0.0,3
+Mut-Con (Pty) Ltd,SA,"Johannesburg, South Africa",https://mut-con.co.za/,29,2030000.0,0.0,0,False,2,Medium,10.0,0.0,0.0,3
+Terra Digital,SA,"Cape Town, South Africa",https://www.terradigital.co.za/,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Evolvea Systems,SA,"Benoni, South Africa",https://www.evolvea.digital/,29,2030000.0,0.0,10000,False,2,Medium,30.0,0.0,0.0,3
+Moontu Digital Solutions,SA,"Cape Town, South Africa",http://moontudigitalsolutions.co.za/,29,2030000.0,0.0,1000,False,2,Medium,10.0,0.0,0.0,3
+Pixel Perfect,SA,"Somerset West, South Africa",http://www.pixelperfect.co.za,29,2030000.0,0.0,5000,False,2,Medium,20.0,0.0,0.0,3
+Fluidity Software Solutions,SA,"Glen Vine, England",https://www.fluidity.solutions/,29,2030000.0,0.0,25000,False,2,Medium,25.0,0.0,0.0,3
+Versys Media,SA,"Sandton, South Africa",https://versysmedia.com/,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+Netgen Custom Software,SA,"Randburg, South Africa",https://www.netgen.co.za/,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+Coherent Solutions,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIzN2MzODhkYi01MTM1LTRjMWQtODM5Yi1jNzM1NDJhY2NiNTMiLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthV:lNTNVbFuCezi8tpRq-LLW96-vV6Xgs-hPh4M8tiJmDw,29,2436000.0,4.73,50000,False,4,Medium,15.0,0.0,0.0,1
+Proven,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJmNTFmMTcwYS0zNjE3LTQ2NjQtOTUyZS00ZjE5ZjMyYjFlYWIiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthV:GvSHpoGG0davLx6tNWyR6kwl86pYLQL1Kc3GYmS56Ec,29,2436000.0,4.912,25000,False,4,Medium,25.0,0.0,10.0,1
+Storm Brain,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIwNjE3NzkwMi0xYWMxLTQyNjAtYWYzNi00OGQ2NDNkMjA1ZWIiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthV:ToXg_OHMKk6-4ckJGXWNvu8mJxCc2Hq9eSB8BMdI7XU,29,2436000.0,5.0124,10000,False,4,Medium,40.0,0.0,0.0,1
+KB Consulting,SA,"Sandton, South Africa",,29,2436000.0,5.01,0,False,4,Medium,12.0,12.0,16.0,1
+Exceed IT,SA,"Pretoria, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,15.0,35.0,10.0,0
+DRUM'N'CODE,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiI4MGJhMTA5MS0yYzk1LTQ3YzMtYjE3NC1iNTE5ODg3ODNjNTUiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthV:oFYgWP8xG_9KDYXsgKYkygBlcWsNB8vnsxWPh2xs0rY,29,2436000.0,5.025,1000,False,4,Medium,30.0,10.0,30.0,1
+Appunite,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJmODY3MjA4NS1jNjg1LTRjNDYtOGVmZS0wYWU5YjY5ZTZmZGMiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthV:eT_JFPV-hbfh2JKxqgb1TvsvTzRuUBfef3ueV4aybPI,29,2436000.0,4.921,10000,False,4,Medium,20.0,0.0,20.0,1
+TKX Media,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJmYThmYWYwZi0zYmY3LTQ5ZWYtOWVjMi02NDliN2RjNGEwZTkiLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthV:ezi5cu54zzTtGfAQfGTIBDEqQnwJBG-bWiEwVM3M9HA,29,2436000.0,5.011,5000,False,4,Medium,40.0,0.0,0.0,1
+ZonkeTech,SA,"Durban, South Africa",,29,2436000.0,4.82,1000,False,4,Medium,10.0,0.0,70.0,1
+Phantom Digital,SA,"Umhlanga, South Africa",,29,2436000.0,5.01,1000,False,4,Medium,10.0,30.0,10.0,0
+Arcade,SA,"Cape Town, South Africa",,29,2436000.0,5.01,1000,False,4,Medium,20.0,0.0,0.0,1
+Designtalks,SA,"Sandton, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,20.0,0.0,0.0,1
+The Grow Collective,SA,"Cape Town, South Africa",,29,2436000.0,5.02,1000,False,4,Medium,10.0,0.0,0.0,1
+Geniusee,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJlN2JkZmRlNi0zOTI4LTRiY2ItOWRlZC05OWRjNWI5OGNkYjYiLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthV:JSa4oQhNATuS9NNcL2evV2F8q_iUqyWQGDEoyM4D47A,14,1176000.0,5.067,50000,False,2,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIxYTYzMjI1My0yOWM0LTQ2ZDQtYWEwOC1hNWZiZmZhMDNkMmUiLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthV:udtW7tB5r7Ly0yN-pIKB611V_CwTqLVAP7w5wA9RsWU,29,2436000.0,4.937,10000,False,4,Medium,35.0,41.0,0.0,0
+Arounda,SA,Completed projects in 19 countries,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIwY2NlYzkyZi04ZGI5LTQwNWUtOGZkMS1jMGNiYjJiMmRhYjMiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthV:KwRHy-X0ARAeF6ff-hALb1-FCHc3Kaz6Or6tdApgFc4,29,2436000.0,5.072,25000,False,4,Medium,30.0,0.0,0.0,1
+Semantica Digital,SA,"Cape Town, South Africa",,29,2436000.0,4.51,5000,False,4,Medium,20.0,0.0,0.0,1
+Yobi Code,SA,"Randburg, South Africa",,29,2436000.0,4.51,5000,False,4,Medium,20.0,0.0,20.0,1
+Dev Technosys,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIwNzNiNDE4MS05ZjU1LTQ5NTMtODc2ZS1jODBhNzQxZjA2MmMiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthV:hJ7a8ZNkvG-eAzINf5BIUbkCfxoZf4rIOBMF52vjtDc,29,2436000.0,4.8201,10000,False,4,Medium,10.0,35.0,0.0,0
+Rekos Agency,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJiMjdhNzgxNC1lMzE2LTRjZWYtOTJiMy04YThhNzlhN2MyN2IiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthV:c2mSVarmsLgMKKNtjU-kXt0hBpfJ-Xua_FuDVMEzBEE,29,2436000.0,4.926,5000,False,4,Medium,30.0,0.0,0.0,1
+Appello Software,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiJhYTY5N2YyYi1mMDA5LTQ5ODktYTBlMS01ZWMzOWFhY2Q2OTMiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthV:qoTtqGJynrfA3bhdEeHaO0-xMt-zCULsAo-MtGDWD-M,29,2436000.0,4.933,50000,False,4,Medium,10.0,55.0,35.0,0
+Fanxy,SA,"Cape Town, South Africa",,29,2436000.0,5.012,1000,False,4,Medium,50.0,0.0,0.0,1
+Red Rabbit Media,SA,"Johannesburg, South Africa",,29,2436000.0,4.82,0,False,4,Medium,15.0,0.0,0.0,1
+Read more,SA,South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiI2YWJjODM5Yi1kZWJiLTQxOWMtYTBhOC0yMDE1ZTJjMzFiOGUiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthV:h9ctqfe8o5R1XvtZ4KWTX2iJ3Bueswo3Mw7QWbc4EE8,29,2030000.0,0.0,10000,False,2,Medium,20.0,20.0,0.0,3
+ExpandX,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjMzZTljNGQzLWJjOTktNDRmNi1iMzk2LWNlZWIxZjgzZGYzMyIsImltcHJlc3Npb25faWQiOiIyZDc2MWEyYy0zOGQ1LTRlYmQtYTJjMi1kMDY0MjcyOTZjMDAiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthV:QdpT_qaNnwaZ25RnS_gPc533IPH9OW4QHdQb3Ejix6I,29,2436000.0,5.066,10000,False,4,Medium,30.0,0.0,0.0,1
+Platinum Seed (Pty) Ltd,SA,"Cape Town, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,20.0,0.0,0.0,3
+Edot Digital,SA,"Sandton, South Africa",,29,2436000.0,5.01,5000,False,4,Medium,15.0,0.0,0.0,1
+PixelTime,SA,"Johannesburg South, South Africa",,29,2030000.0,0.0,0,False,2,Medium,50.0,0.0,0.0,3
+011 digital,SA,"Sandton, South Africa",,29,2436000.0,5.01,250000,False,4,Medium,15.0,0.0,10.0,1
+Bizco Tech South Africa,SA,"Pretoria, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+PrimeLogic,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,40.0,0.0,30.0,3
+SrsBsns,SA,"Germiston, South Africa",,29,2030000.0,0.0,0,False,2,Medium,35.0,0.0,30.0,3
+Kagiso Interactive,SA,"Durban, South Africa",,29,2030000.0,0.0,25000,False,2,Medium,30.0,30.0,0.0,3
+iSimon Web Design and Development,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,35.0,0.0,0.0,3
+Simplr,SA,"Cape Town, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,15.0,0.0,0.0,3
+Kingly Clark,SA,"Stellenbosch, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,20.0,3
+Studio112,SA,"Pretoria, South Africa",,112,7840000.0,0.0,0,False,0,Medium,25.0,0.0,0.0,2
+PYGIO,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,10.0,10.0,10.0,3
+Empire Web (Pty)Ltd.,SA,"Brakpan, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,70.0,30.0,0.0,3
+Blue Screen Media Marketing,SA,"Kloof, South Africa",,29,2030000.0,0.0,0,False,2,Medium,65.0,0.0,0.0,3
+Pytbyte Web and App Development,SA,"Malmesbury, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,50.0,0.0,3
+Black Alsatian,SA,"Gqeberha, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+Daily Dose Marketing,SA,"George, South Africa",,29,2030000.0,0.0,0,False,2,Medium,50.0,0.0,0.0,3
+Rocketsoft,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,35.0,0.0,3
+Ignite Media (South Africa),SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,10.0,0.0,0.0,3
+League Digital,SA,"Sandton, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,20.0,20.0,0.0,3
+Skywalk Innovations,SA,"Cape Town, South Africa",,29,2436000.0,5.01,10000,False,4,Medium,20.0,0.0,10.0,1
+Ravensdale Digital Services,SA,"Cape Town, South Africa",,50,3500000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+Philanthrosoft,SA,"Randburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,80.0,0.0,20.0,3
+eTraverse,SA,"Sandton, South Africa",,38,3192000.0,5.02,1000,False,4,Medium,20.0,0.0,10.0,1
+Cosimo Web & Design,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+Bandelaweb,SA,"East London, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+One Square Web,SA,"Sandton, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+Konten,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,40.0,0.0,0.0,3
+Fishgate Advertising,SA,"Cape Town, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,20.0,0.0,0.0,3
+Online By Digital,SA,"Midrand, South Africa",,25,1750000.0,0.0,5000,False,2,Medium,45.0,0.0,0.0,3
+Hamba | Mobile App Developers,SA,"Sandton, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,30.0,40.0,0.0,3
+DVTNot yet reviewed,SA,"Cape Town, South Africa",,18,1260000.0,0.0,10000,False,0,Medium,20.0,0.0,20.0,3
+Codilation,SA,"Knysna, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,10.0,10.0,3
+KB Alpha,SA,"Pinetown, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,50.0,50.0,0.0,3
+HowdyPress,SA,"Cape Town, South Africa",,29,2030000.0,0.0,0,False,2,Medium,50.0,0.0,0.0,3
+insync with tornado,SA,"eMalahleni, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,50.0,0.0,0.0,3
+Wolfe&Co.,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Runninghill software development,SA,"Roodepoort, South Africa",,29,2030000.0,0.0,0,False,2,Medium,35.0,0.0,35.0,3
+Coherent Solutions,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiIyNWY0YzllZS05NTI4LTRhODQtYmVlMS01NDI5NjQ5ZjM3MmEiLCJwcm92aWRlcl9pZCI6ODI0NDksImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNDgyODIsInBvc2l0aW9uIjoxLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthe:gS3wozktOEtCeHM51mV-00wHJ5XJFu2At-ufIf-sIkc,14,1176000.0,4.73,50000,False,2,Medium,15.0,0.0,0.0,3
+Proven,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiI3Zjk5ODljZi1iOWQzLTQ2OTMtYjcwNi03NzY4NDRlMTFhZGIiLCJwcm92aWRlcl9pZCI6MzUwNTgwLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM3OTU4LCJwb3NpdGlvbiI6MiwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthe:Ed9wo4nUTdB8WqSAN1lFga46fS2ij5VJ6RdmNip-HjA,29,2436000.0,4.912,25000,False,4,Medium,25.0,0.0,10.0,1
+Storm Brain,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJmYWZmYjJlOS02MzQ2LTRiM2UtYjAyZi1hYmQ5ZjUwMDhhNmQiLCJwcm92aWRlcl9pZCI6MTQ0MzUyLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MzAzNTk5LCJwb3NpdGlvbiI6MywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthe:CqpULMEU6jBhSX6XtNYlAMKK4aKABhGhZZlNh7zpcDM,29,2436000.0,5.0124,10000,False,4,Medium,40.0,0.0,0.0,1
+Sikadi Tech,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,40.0,10.0,0.0,3
+Flow Communications,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,0,False,2,Medium,25.0,0.0,0.0,3
+DRUM'N'CODE,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJkNWM0NDc0NC02OWVhLTQ3MDMtYWRhNi04NzZkZWVmZDAxNmUiLCJwcm92aWRlcl9pZCI6MTE1NDM1OCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI1OTc1OCwicG9zaXRpb24iOjQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthe:mi1b-5ETIIu1a_MxCylnJ92O7biw5Blu3dOkDbSIXB0,29,2436000.0,5.025,1000,False,4,Medium,30.0,10.0,30.0,1
+Appunite,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiIyNDA2MjM3OC03N2YzLTQ5N2MtYmU4My00MDRjZTMzOTBmZmQiLCJwcm92aWRlcl9pZCI6MzMyMTgsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjoyMzc2MzYsInBvc2l0aW9uIjo1LCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthe:0B9dkyeJM-EXU8LchWW63-18zVSMjEApavxKLdKyh8U,29,2436000.0,4.921,10000,False,4,Medium,20.0,0.0,20.0,1
+TKX Media,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJlOWJmN2VjOS00NGQxLTQ1NWEtYWE2My04MzU0OGIwZGE1NDMiLCJwcm92aWRlcl9pZCI6MjUzMTE5NCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM1MTI2MSwicG9zaXRpb24iOjYsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthe:B5n4cfmsmAAtcwetrIW19OVj-afEciMcis2-8TA5jqw,29,2436000.0,5.011,5000,False,4,Medium,40.0,0.0,0.0,1
+DiginamiX,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,15.0,10.0,0.0,3
+WebFree.co.za,SA,"Bloemfontein, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,40.0,10.0,0.0,3
+Southern Sons Group,SA,"Kempton Park, South Africa",,29,2030000.0,0.0,25000,False,2,Medium,40.0,0.0,0.0,3
+WDS Creative,SA,"Sandton, South Africa",,29,2030000.0,0.0,0,False,2,Medium,40.0,0.0,0.0,3
+Pulacache,SA,"Roodepoort, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,45.0,0.0,0.0,3
+Geniusee,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJhNDYwNTU5OC05ZWY3LTRjYTItYWY0Ny1lNDhkN2MzY2EyNzgiLCJwcm92aWRlcl9pZCI6MTUzOTkxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mjg5NjUxLCJwb3NpdGlvbiI6NywiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthe:vkjuUCy0dLgNddHzm1SIkn9o0dPogFaPnnCRhKnYTNc,29,2436000.0,5.067,50000,False,4,Medium,40.0,0.0,40.0,1
+"TRIARE, LLC",SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJhNTBmOTQxNy01YTMzLTRiOWEtYTZkYy1kY2EzNmI3YzJhNTQiLCJwcm92aWRlcl9pZCI6Njg3NjgxLCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM5ODU0LCJwb3NpdGlvbiI6OCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthe:3H4_mHAUm97g1ZC4LXv9u-r4XwaOXkbUJG-ADEUmBO4,29,2436000.0,4.937,10000,False,4,Medium,35.0,41.0,0.0,0
+Arounda,SA,South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiIwNWEwY2RmMC1mZjA0LTQ2YzYtYmNhNC05M2VlNjljNDZlZTIiLCJwcm92aWRlcl9pZCI6MTE1MzA3MCwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM3MzE4NywicG9zaXRpb24iOjksImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthe:bZBHPSwMyIpa_X3bOlBvcdyufpmjyN4UXr0EYbCqVwg,29,2436000.0,5.072,25000,False,4,Medium,30.0,0.0,0.0,1
+WIthNova Blink Digital Marketing,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+XPNDIT DIGITAL,SA,"Sandton, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,15.0,0.0,0.0,3
+Dev Technosys,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiI4NzlkMzcyZC1iNTE5LTQ0MzYtODFmNi1kY2VlYmQ3OGRhMDgiLCJwcm92aWRlcl9pZCI6NDYzMzQsImZlYXR1cmVkX2xpc3RpbmdfaWQiOjIsImZlYXR1cmVkX3Bvc2l0aW9uX2lkIjozNzc2ODUsInBvc2l0aW9uIjoxMCwiaXNfc3BvdGxpZ2h0IjpmYWxzZX0:1vsthe:JUtFeIMUNRoIH7ONGekpZYxm1s2llryxQmgDsgnGKTE,29,2436000.0,4.8201,10000,False,4,Medium,10.0,35.0,0.0,0
+Rekos Agency,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiI3NjNjYWIwZS0wZTI0LTRjMzktYTY4OS02YzZkMDA3MzM3OTkiLCJwcm92aWRlcl9pZCI6MjA2NzA4NywiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjI2NDIwMywicG9zaXRpb24iOjExLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthe:C22MZV3EGbzoICFd_KFInLwMLbOY_6MlLvxlslZk7Is,29,2436000.0,4.926,5000,False,4,Medium,30.0,0.0,0.0,1
+Appello Software,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJjMDAzM2JhZi1mYTVjLTQyNTctOTdkNi1mYWZjNjU1OWVhZTgiLCJwcm92aWRlcl9pZCI6NTk1MDY2LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6MjM2MTQyLCJwb3NpdGlvbiI6MTIsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthe:Y4fUJHmhn1m3RcI-l-1_i6Y6aEP7N7EYHzzKREellBo,33,2772000.0,4.933,50000,False,4,Medium,10.0,55.0,35.0,0
+Delegate IT,SA,"Boksburg, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,40.0,0.0,30.0,3
+Pixelsinframe,SA,"Midrand, South Africa",,29,2030000.0,0.0,0,False,2,Medium,40.0,0.0,0.0,3
+Read more,SA,South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiJkYmUxYTg2Ny0wOTYyLTRmZjUtYWY1ZC1hYjZjOThiZDVjMDMiLCJwcm92aWRlcl9pZCI6MjUxNjkxNSwiZmVhdHVyZWRfbGlzdGluZ19pZCI6MiwiZmVhdHVyZWRfcG9zaXRpb25faWQiOjM4MjQ2NywicG9zaXRpb24iOjEzLCJpc19zcG90bGlnaHQiOmZhbHNlfQ:1vsthe:TmSVQc6-XhfczEf0Nklx-CVC1JLK-sjIVJMsXFN5Z9M,29,2030000.0,0.0,10000,False,2,Medium,20.0,20.0,0.0,3
+ExpandX,SA,Serves South Africa,https://ppc.clutch.co/ppc/click/%3Fs%3DeyJkZWNpc2lvbl9pZCI6IjY5NzdlNzkwLWFmYzAtNDA4Mi05MjA2LTIwYTdhMDA4NWFmOSIsImltcHJlc3Npb25faWQiOiIxMTUxYTcwYS1mYzYzLTQzYzYtOTZkZC00MzMxMDllZWMzM2MiLCJwcm92aWRlcl9pZCI6NzMyNTA0LCJmZWF0dXJlZF9saXN0aW5nX2lkIjoyLCJmZWF0dXJlZF9wb3NpdGlvbl9pZCI6Mzg1MTMxLCJwb3NpdGlvbiI6MTQsImlzX3Nwb3RsaWdodCI6ZmFsc2V9:1vsthe:3hYaONzxnTfYAthwfj6x_EEu0F4toqie_vzS5rxIpnc,29,2436000.0,5.066,10000,False,4,Medium,30.0,0.0,0.0,1
+Adzonline,SA,"Pretoria, South Africa",,29,2030000.0,0.0,0,False,2,Medium,30.0,0.0,0.0,3
+Industrial Growth Hub,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,25.0,3
+CodePure,SA,"Bloemfontein, South Africa",,50,3500000.0,0.0,0,False,2,Medium,30.0,5.0,15.0,3
+Lilo Web Design,SA,"Cape Town, South Africa",,58,4060000.0,0.0,5000,False,2,Medium,25.0,0.0,0.0,3
+ACJ Intro Designs (Pty) Ltd,SA,"Johannesburg South, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,30.0,10.0,0.0,3
+PowerWeb,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,10.0,0.0,0.0,3
+Mavis Strategic Partners,SA,"Midrand, South Africa",,29,2030000.0,0.0,0,False,2,Medium,35.0,35.0,0.0,3
+radiantWEB,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,55.0,0.0,0.0,3
+Studio Vene Design,SA,"Centurion, South Africa",,29,2436000.0,5.07,10000,False,4,Medium,40.0,0.0,0.0,1
+Web2Web,SA,"Cape Town, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,10.0,5.0,0.0,3
+Ukuyila Group,SA,"Wellington, South Africa",,29,2030000.0,0.0,0,False,2,Medium,30.0,0.0,0.0,3
+Rogerwilco,SA,"Cape Town, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,20.0,0.0,0.0,3
+Khanyisa Real Systems,SA,"Cape Town, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,20.0,10.0,40.0,3
+Jthoka & Co,SA,"Midrand, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,35.0,10.0,15.0,3
+Tech Genius,SA,"Cape Town, South Africa",,29,2030000.0,0.0,25000,False,2,Medium,35.0,0.0,35.0,3
+Dado,SA,"Cape Town, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,30.0,0.0,20.0,3
+AdNotes Digital,SA,"Outer West Durban, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,30.0,0.0,0.0,3
+Bitogiq,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,35.0,0.0,3
+19 Digital,SA,"Stellenbosch, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Vectra,SA,"Pretoria, South Africa",,29,2030000.0,0.0,25000,False,2,Medium,20.0,20.0,0.0,3
+Lucky Beard,SA,"Centurion, South Africa",,23,1610000.0,0.0,25000,False,0,Medium,20.0,20.0,0.0,3
+Tenacity Works,SA,"Cape Town, South Africa",,50,3500000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Global Software Services Pty Ltd,SA,"Vereeniging, South Africa",,29,2436000.0,4.51,0,False,4,Medium,10.0,10.0,10.0,1
+Iweb Interactive,SA,"Queensburgh, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,0.0,3
+The Process Enterprise,SA,"Cape Town, South Africa",,29,2030000.0,0.0,0,False,2,Medium,20.0,30.0,0.0,3
+Dimension WebWorx,SA,"Bloemfontein, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+MO Agency,SA,"Johannesburg, South Africa",,29,2030000.0,0.0,0,False,2,Medium,20.0,0.0,0.0,3
+Tecbot,SA,"Edenvale, South Africa",,29,2030000.0,0.0,5000,False,2,Medium,20.0,0.0,20.0,3
+BlaqBerry,SA,"Sandton, South Africa",,29,2030000.0,0.0,0,False,2,Medium,35.0,0.0,0.0,3
+SitePlug,SA,"Cape Town, South Africa",,29,2030000.0,0.0,0,False,2,Medium,35.0,0.0,0.0,3
+Ripple Digital,SA,"Cape Town, South Africa",,29,2030000.0,0.0,0,False,2,Medium,30.0,0.0,0.0,3
+Software Couch,SA,"Durban North, South Africa",,29,2030000.0,0.0,25000,False,2,Medium,30.0,10.0,0.0,3
+eCommerce Development,SA,"Paarl, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,10.0,0.0,0.0,3
+Innovative Thinking,SA,"Sandton, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,20.0,0.0,80.0,3
+Usably,SA,"Cape Town, South Africa",,29,2030000.0,0.0,10000,False,2,Medium,25.0,0.0,0.0,3
+Website Web Designs,SA,"Randburg, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,25.0,0.0,0.0,3
+Rubigo,SA,"Cape Town, South Africa",,29,2436000.0,5.03,1000,False,4,Medium,40.0,0.0,20.0,1
+iMarttrends,SA,"Randburg, South Africa",,100,7000000.0,0.0,1000,False,2,Medium,30.0,30.0,0.0,2
+idts,SA,"Cape Town, South Africa",,29,2030000.0,0.0,1000,False,2,Medium,30.0,30.0,0.0,3

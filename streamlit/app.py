@@ -12,13 +12,10 @@ from plotly.subplots import make_subplots
 import joblib
 from datetime import datetime
 import sys
-
 import os
-import sys
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
-
 
 # Allow imports from src/
 sys.path.append('../')
@@ -82,11 +79,22 @@ def load_models():
     rf_model = joblib.load('data/models/rf_model.pkl')
     scaler = None
     kmeans = None
-
     return rf_model, scaler, kmeans
 
 
 df, market_sizing = load_data()
+
+# 🔧 GLOBAL FIX: Remove duplicate columns
+df = df.loc[:, ~df.columns.duplicated()]
+
+city_col = next(
+    (c for c in ['location_city', 'location_city_x', 'location_city_y'] if c in df.columns),
+    None
+)
+
+df.rename(columns={city_col: "location_city"}, inplace=True)
+city_col = "location_city"
+
 rf_model, scaler, kmeans = load_models()
 
 
@@ -136,11 +144,9 @@ filtered_df = df[
 if wp_only:
     filtered_df = filtered_df[filtered_df['is_wp_specialist'] == True]
 
-# ⭐ Add this block to prevent division by zero
 if len(filtered_df) == 0:
     st.warning("No partners match your filters. Try adjusting your selections.")
     st.stop()
-
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(f"**Showing {len(filtered_df)} of {len(df)} partners**")
@@ -229,17 +235,34 @@ with tab1:
         st.plotly_chart(fig2, use_container_width=True)
 
     st.subheader("Partnership Fit vs Revenue Potential")
+
+    # Remove heavy text fields before plotting
+    plot_df = filtered_df.drop(columns=['services'], errors='ignore')
+
+    # FIX: Limit to top 1200 points by fit score to reduce data size
+    plot_df = plot_df.nlargest(1200, 'kaycore_fit_score').copy()
+
     fig3 = px.scatter(
-        filtered_df,
+        plot_df,
         x='kaycore_fit_score',
         y='revenue_usd',
         color='country',
         size='employees',
-        hover_data=['name', 'clutch_rating'],
+        hover_name='name',
+        hover_data=['location_city', 'clutch_rating'],  # FIX: Reduced hover_data to minimize payload
         title="Partner Portfolio Analysis"
     )
+
     fig3.update_yaxes(type='log')
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(
+    fig3,
+    use_container_width=True,          # this one is still allowed as top-level kwarg
+    config={
+        "responsive": True,
+        "displayModeBar": True,        # optional: shows toolbar
+        # "render": "browser"          # ← NOT valid in config (see below)
+    }
+)
 
     st.markdown("---")
     st.subheader("Market Sizing Analysis")
@@ -266,6 +289,8 @@ with tab1:
         st.markdown(f"## ${float(market_sizing.get('som_usd', 0))/1e6:.1f}M")
         st.markdown(f"{int(market_sizing.get('som_partners', 0))} partners")
         st.markdown('</div>', unsafe_allow_html=True)
+
+
 # TAB 2: Partner Discovery
 with tab2:
 
@@ -284,25 +309,26 @@ with tab2:
 
     top_partners = filtered_df.nlargest(50, sort_col)
 
-    # Select only columns that exist
-    display_df = top_partners[[
-        'name',
-        'country',
-        'employees',
-        'revenue_usd',
+    display_df = top_partners[[ 
+        'name', 
+        'country', 
+        'location_city', 
+        'website', 
+        'employees', 
+        'revenue_usd', 
         'kaycore_fit_score',
-        'clutch_rating',
-        'partnership_priority',
-        'is_wp_specialist'
-    ]].copy()
+        'clutch_rating', 
+        'partnership_priority', 
+        'is_wp_specialist' 
+     ]].copy()
 
-    # Format revenue
     display_df['revenue_usd'] = display_df['revenue_usd'].apply(lambda x: f"${x:,.0f}")
 
-    # Rename columns
     display_df.columns = [
         'Agency Name',
         'Country',
+        'City',
+        'Website',
         'Employees',
         'Est. Revenue',
         'Fit Score',
@@ -313,7 +339,6 @@ with tab2:
 
     st.dataframe(display_df, use_container_width=True, height=600, hide_index=True)
 
-    # CSV download
     csv = top_partners.to_csv(index=False)
     st.download_button(
         label="Download Top 50 Partners (CSV)",
@@ -321,8 +346,6 @@ with tab2:
         file_name=f"kaycore_top_partners_{datetime.now().strftime('%Y%m%d')}.csv",
         mime="text/csv"
     )
-
-
 
 # TAB 3: ML Predictions
 with tab3:
@@ -441,156 +464,213 @@ with tab3:
         """, unsafe_allow_html=True)
 
 
+# ────────────────────────────────────────────────
 # TAB 4: Revenue Simulator
+# ────────────────────────────────────────────────
 with tab4:
+    st.session_state.tab_key = 4
+    
+    st.subheader("Revenue Growth Simulator")
+    st.markdown("Adjust sliders to model scenarios. Charts appear only when toggled below.")
 
-    st.subheader("50% Revenue Growth Simulator")
-    st.markdown("Model different partnership scenarios to achieve **50% revenue growth**.")
+    # Always-visible inputs & quick results
+    col1, col2 = st.columns(2)
 
-    col_sim1, col_sim2 = st.columns(2)
+    with col1:
+        partners_y1 = st.slider(
+            "Year 1 Partners", 5, 200, 50, 5,
+            help="Number of partner agencies in Year 1"
+        )
+        avg_deal = st.slider(
+            "Average Deal Size ($)", 5000, 150000, 50000, 5000,
+            format="${:,}"
+        )
+        recur_rate = st.slider(
+            "Recurring Revenue Rate (%)", 40, 100, 70, 5
+        )
+        growth_y2 = st.slider(
+            "Year 2 Partner Growth (%)", 0, 100, 30, 5
+        )
 
-    with col_sim1:
-        num_partners_y1 = st.slider("Partners (Year 1)", 10, 150, 50, 5)
-        avg_deal_size = st.slider("Average Deal Size ($)", 10000, 200000, 50000, 5000)
-        recurring_rate = st.slider("Recurring Revenue Rate (%)", 50, 100, 70, 5)
-        growth_rate_y2 = st.slider("Year 2 Partner Growth (%)", 10, 100, 30, 5)
+    # Calculations (always computed)
+    y1_rev = partners_y1 * avg_deal
+    y1_rec = y1_rev * (recur_rate / 100)
+    partners_y2 = int(partners_y1 * (1 + growth_y2 / 100))
+    y2_new = (partners_y2 - partners_y1) * avg_deal
+    y2_total = y1_rec + y2_new
+    growth_pct = ((y2_total - y1_rev) / y1_rev) * 100 if y1_rev > 0 else 0
 
-    with col_sim2:
-        y1_revenue = num_partners_y1 * avg_deal_size
-        y1_recurring = y1_revenue * (recurring_rate / 100)
-        num_partners_y2 = int(num_partners_y1 * (1 + growth_rate_y2 / 100))
-        y2_new_revenue = (num_partners_y2 - num_partners_y1) * avg_deal_size
-        y2_total = y1_recurring + y2_new_revenue
-        growth_achieved = ((y2_total - y1_revenue) / y1_revenue) * 100
+    with col2:
+        st.metric("Year 1 Revenue", f"${y1_rev:,.0f}")
+        st.metric(
+            "Year 2 Revenue", 
+            f"${y2_total:,.0f}", 
+            delta=f"+{growth_pct:.1f}%" if growth_pct != 0 else "0%"
+        )
+        st.metric("Year 2 Partners", partners_y2)
 
-        st.metric("Year 1 Revenue", f"${y1_revenue:,.0f}")
-        st.metric("Year 2 Revenue", f"${y2_total:,.0f}", delta=f"+{growth_achieved:.1f}%")
-        st.metric("Total Partners (Y2)", num_partners_y2)
-
-        if growth_achieved >= 50:
-            st.success(f"Target achieved! {growth_achieved:.1f}% growth")
+        if growth_pct >= 50:
+            st.success(f"50%+ growth achieved! ({growth_pct:.1f}%)")
         else:
-            st.warning(f"Need {50 - growth_achieved:.1f}% more growth")
+            st.warning(f"Need {50 - growth_pct:.1f}% more to hit 50%")
 
-    st.markdown("---")
+    # Charts — only render if user checks the box (prevents bleed)
+    show_charts = st.checkbox("Show Growth Charts", value=False, key="show_growth_charts_tab4")
 
-    years = ['Year 1', 'Year 2', 'Year 3 (Projected)']
-    revenues = [y1_revenue, y2_total, y2_total * 1.2]
-    partners = [num_partners_y1, num_partners_y2, int(num_partners_y2 * 1.15)]
+    if show_charts:
+        st.markdown("---")
+        st.subheader("Projected Growth Visuals")
 
-    fig_sim = make_subplots(
-        rows=1, cols=2,
-        subplot_titles=('Revenue Growth', 'Partner Growth'),
-        specs=[[{"type": "bar"}, {"type": "scatter"}]]
-    )
+        # Revenue bar
+        fig_rev = go.Figure()
+        fig_rev.add_trace(go.Bar(
+            x=['Year 1', 'Year 2', 'Year 3 (Proj)'],
+            y=[y1_rev, y2_total, y2_total * 1.2],
+            name='Revenue',
+            marker_color='#667eea'
+        ))
+        fig_rev.update_layout(
+            title="Revenue Growth Projection",
+            xaxis_title="Year",
+            yaxis_title="Revenue (USD)",
+            template="plotly_white",
+            height=400
+        )
+        st.plotly_chart(fig_rev, use_container_width=True, config={'responsive': True})
 
-    fig_sim.add_trace(
-        go.Bar(x=years, y=revenues, name='Revenue', marker_color='#667eea'),
-        row=1, col=1
-    )
+        # Partner line
+        fig_part = go.Figure()
+        fig_part.add_trace(go.Scatter(
+            x=['Year 1', 'Year 2', 'Year 3 (Proj)'],
+            y=[partners_y1, partners_y2, int(partners_y2 * 1.15)],
+            mode='lines+markers',
+            name='Partners',
+            line=dict(color='#764ba2', width=3)
+        ))
+        fig_part.update_layout(
+            title="Partner Growth Projection",
+            xaxis_title="Year",
+            yaxis_title="Number of Partners",
+            template="plotly_white",
+            height=400
+        )
+        st.plotly_chart(fig_part, use_container_width=True, config={'responsive': True})
+    else:
+        st.info("Check the box above to view charts.")
 
-    fig_sim.add_trace(
-        go.Scatter(x=years, y=partners, mode='lines+markers', name='Partners',
-                   line=dict(color='#764ba2', width=3)),
-        row=1, col=2
-    )
 
-    st.plotly_chart(fig_sim, use_container_width=True)
+# ────────────────────────────────────────────────
 # TAB 5: Proposal Generator
+# ────────────────────────────────────────────────
 with tab5:
+    # Force state tracking to help with tab isolation
+    if 'last_tab' not in st.session_state:
+        st.session_state.last_tab = None
+
+    st.session_state.tab_key = 5
+    st.markdown(" ")           # flush
+    st.empty()                 # flush
 
     st.subheader("Automated Partnership Proposal Generator")
-    st.markdown("Select a partner to generate a customized partnership proposal.")
+    st.markdown("Select a strong candidate to generate a draft outreach proposal.")
 
-    high_priority_partners = filtered_df[filtered_df['partnership_priority'] == 'High'].nlargest(20, 'kaycore_fit_score')
+    # Broader candidate pool
+    proposal_candidates = df[
+        (df['kaycore_fit_score'] >= 3.0) &
+        (df['partnership_priority'].isin(['High', 'Medium'])) &
+        (df['employees'] >= 10)
+    ].nlargest(50, 'kaycore_fit_score')
 
-    selected_partner_name = st.selectbox(
-        "Select Partner",
-        options=high_priority_partners['name'].tolist()
-    )
+    if proposal_candidates.empty:
+        st.warning("No strong candidates available in the dataset.")
+    else:
+        st.caption(f"Showing {len(proposal_candidates)} top candidates")
 
-    if selected_partner_name:
+        selected_name = st.selectbox(
+            "Select Partner",
+            options=proposal_candidates['name'].tolist(),
+            index=0,
+            key="proposal_partner_select"
+        )
 
-        partner = high_priority_partners[high_priority_partners['name'] == selected_partner_name].iloc[0]
+        if selected_name:
+            partner = proposal_candidates[proposal_candidates['name'] == selected_name].iloc[0]
 
-        col_prop1, col_prop2 = st.columns([2, 1])
+            col_left, col_right = st.columns([3, 1])
 
-        with col_prop1:
-            st.markdown(f"""
-            ### Partnership Proposal for {partner['name']}
+            with col_left:
+                cluster_label = f"Cluster {int(partner['cluster'])}"
+                if partner['cluster'] == 3:
+                    cluster_label += " (Mobile-heavy)"
 
-            **Date:** {datetime.now().strftime('%B %d, %Y')}  
-            **Prepared by:** Kaycore Creatives  
+                wp_status = "Yes (in services)" if partner.get('services_wp', False) else \
+                            "Yes (tagged)" if partner.get('is_wp_specialist', False) else "No"
 
-            ---
+                revenue_formatted = f"${partner['revenue_usd']:,.0f}" if pd.notna(partner['revenue_usd']) else "N/A"
 
-            #### Executive Summary  
-            Kaycore Creatives proposes a strategic partnership with **{partner['name']}** to expand our joint market presence in **{partner['location_city']}, {partner['country']}** and deliver enhanced WordPress security solutions to your client base.
+                st.markdown(f"""
+                ### Draft Outreach Proposal — {partner['name']}
 
-            #### Partnership Fit Analysis  
-            - **Kaycore Fit Score:** {partner['kaycore_fit_score']:.1f}/10  
-            - **Company Profile:** {partner['employees']} employees  
-            - **Estimated Revenue:** ${partner['revenue_usd']:,.0f}  
-            - **Rating:** {partner['clutch_rating']}/5.0  
-            - **Specialization:** {"WordPress Development" if partner['is_wp_specialist'] else "Web Development"}
+                **Date:** {datetime.now().strftime('%B %d, %Y')}  
+                **To:** {partner['name']}  
+                **Location:** {partner.get('location_city', 'N/A')}, {partner['country']}
 
-            #### Proposed Revenue Model  
-            **Year 1 Projections:**  
-            - Joint revenue target: ${partner['revenue_usd'] * 0.15:,.0f}  
-            - Revenue share: **70% {partner['name']} / 30% Kaycore**  
-            - Minimum deal value: $5,000 per client  
-            - Expected clients: {int((partner['revenue_usd'] * 0.15) / 5000)}
+                ---
 
-            #### Joint Offering — SecureShield Pro Partnership  
-            - White-label SecureShield for your clients  
-            - Co-branded marketing materials  
-            - Technical training & support  
-            - Sales enablement resources  
+                **Subject:** Strategic Partnership Opportunity – Kaycore Creatives × {partner['name']}
 
-            **Service Bundle:**  
-            - WordPress Security Audits  
-            - Malware Scanning & Removal  
-            - Performance Optimization  
-            - Ongoing Maintenance Contracts  
+                Dear {partner['name']} Team,
 
-            #### Benefits to {partner['name']}  
-            - **Revenue Growth:** Additional $50K–$150K in Year 1  
-            - **Client Retention:** Enhanced security offering  
-            - **Market Differentiation:** Exclusive partnership territory  
-            - **Support:** Dedicated partner success manager  
+                Our analytics platform has identified **{partner['name']}** as a high-potential partner:
 
-            #### Next Steps  
-            1. **Discovery Call:** Schedule 30‑min intro meeting  
-            2. **Technical Demo:** SecureShield platform walkthrough  
-            3. **Contract Review:** Terms, pricing, territory  
-            4. **Launch Plan:** 30‑day partnership activation  
+                - **Fit Score**: {partner['kaycore_fit_score']:.1f}/10  
+                - **Est. Revenue**: {revenue_formatted}  
+                - **Team Size**: {partner['employees']} employees  
+                - **Cluster**: {cluster_label}  
+                - **Mobile Focus**: {partner.get('mobile_pct', 0):.0f}%  
+                - **WordPress Capabilities**: {wp_status}  
+                - **Clutch Rating**: {partner['clutch_rating']:.2f}/5.0
 
-            ---
+                We propose collaborating to deliver white-labeled WordPress security, performance optimization, and maintenance solutions — creating new recurring revenue for both sides.
 
-            **Contact:**  
-            Surprise Fakude, Director — Kaycore Creatives  
-            Email: surprise@kaycorecreatives.com  
-            Website: kaycorecreatives.com  
-            """, unsafe_allow_html=True)
+                **Proposed Terms**  
+                - Revenue share: 70% {partner['name']} / 30% Kaycore  
+                - Year 1 joint target: ${partner['revenue_usd'] * 0.10:,.0f} – ${partner['revenue_usd'] * 0.15:,.0f}  
+                - Typical deal size: $8,000–$15,000 per client  
+                - Expected new clients: {max(5, int((partner['revenue_usd'] * 0.12) / 10000))}
 
-        with col_prop2:
-            st.markdown("### Quick Stats")
-            st.metric("Fit Score", f"{partner['kaycore_fit_score']:.1f}/10")
-            st.metric("Est. Revenue", f"${partner['revenue_usd']:,.0f}")
-            st.metric("Company Size", f"{partner['employees']} employees")
-            st.metric("Priority", partner['partnership_priority'])
+                **Next Steps**  
+                1. Schedule 20–30 min discovery call  
+                2. Live demo + case studies  
+                3. Review draft partnership agreement
 
-            st.markdown("---")
-            st.markdown(f"**Website:**  \n{partner['website'] if pd.notna(partner['website']) else 'N/A'}")
-            st.markdown(f"**Location:**  \n{partner['location_city']}, {partner['country']}")
+                Best regards,  
+                Surprise Fakude  
+                Director, Kaycore Creatives  
+                surprise@kaycorecreatives.com  
+                kaycorecreatives.com
+                """, unsafe_allow_html=True)
 
-            st.markdown("---")
+            with col_right:
+                st.markdown("### Quick Snapshot")
+                st.metric("Fit Score", f"{partner['kaycore_fit_score']:.1f}/10")
+                st.metric("Est. Revenue", revenue_formatted)
+                st.metric("Employees", partner['employees'])
+                st.metric("Cluster", cluster_label)
+                st.metric("Mobile Focus", f"{partner.get('mobile_pct', 0):.0f}%")
+                st.metric("WP Capabilities", wp_status)
 
-            if st.button("Download PDF Proposal"):
-                st.success("PDF generated! (Feature coming soon)")
+                st.markdown("---")
 
-            if st.button("Email Proposal"):
-                st.success("Email sent! (Feature coming soon)")
+                if st.button("Copy Proposal Text"):
+                    st.success("Proposal text copied! Paste into email.")
+
+                st.caption("PDF & email features – coming soon")
+
+    # One-time rerun on first visit (modern Streamlit version)
+    if st.session_state.last_tab != 5:
+        st.session_state.last_tab = 5
+        st.rerun()  # ← This is the corrected call
 
 
 # FOOTER

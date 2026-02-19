@@ -51,14 +51,14 @@ class GlobalPartnerScraper:
                 self.driver.get(url)
                 time.sleep(4)  # Give React time to hydrate
 
-                # Wait for main listing container (more reliable than old 'provider')
+                # Wait for main listing container
                 WebDriverWait(self.driver, 20).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, "div[class*='listing'], div[data-clutch], li[class*='provider']"))
                 )
 
                 soup = BeautifulSoup(self.driver.page_source, 'html.parser')
 
-                # Modern card selectors — try multiple patterns
+                # Try multiple card selectors
                 card_selectors = [
                     'div.sponsor-listing',           # sponsored
                     'div.provider-row',              # organic
@@ -81,11 +81,15 @@ class GlobalPartnerScraper:
                 for card in agency_cards:
                     try:
                         agency = self._parse_clutch_card(card, country_code)
-                        if agency:
+                        if agency is not None:
                             agencies.append(agency)
                     except Exception as e:
                         logger.warning(f"Failed to parse one card: {e}")
                         continue
+
+                # Debug line
+                logger.info(f"Parsed {len(agencies)} agencies so far on page {page} "
+                           f"(names found: {sum(1 for a in agencies if a['name'] != 'Unknown Agency')})")
 
                 time.sleep(3.5)  # polite delay
 
@@ -98,40 +102,184 @@ class GlobalPartnerScraper:
     def _parse_clutch_card(self, card, country_code):
         data = {'country': country_code, 'source': 'clutch.co'}
 
-        # Name
-        name_tag = card.select_one('h3, .company-name, .title, a[href*="/profile/"], span.company')
-        data['name'] = name_tag.get_text(strip=True) if name_tag else 'Unknown'
+        # ────────────────────────────────────────────────────────
+        # NAME - more robust extraction with multiple fallbacks
+        # ────────────────────────────────────────────────────────
+        name = None
 
-        # Website
-        website_tag = card.select_one('a.website-link, a[href^="http"]:not([href*="/profile"]), a[rel="nofollow"]')
-        data['website'] = website_tag['href'] if website_tag else None
+        # 1. Try direct profile link anchor text (most reliable)
+        profile_link = card.select_one('a[href*="/profile/"]')
+        if profile_link and profile_link.get_text(strip=True):
+            name = profile_link.get_text(strip=True)
 
-        # Location (city or detail)
-        loc_tag = card.select_one('.locality, .location, span[class*="location"], .city')
+        # 2. Fallback: look for common heading classes
+        if not name:
+            for tag in ['h3', 'h2', 'div', 'span']:
+                candidates = card.select(f'{tag}[class*="name"], {tag}[class*="title"], {tag}[class*="company"], {tag}[class*="provider"]')
+                for c in candidates:
+                    text = c.get_text(strip=True)
+                    if text and len(text) > 3 and not text.lower().startswith(('visit', 'view', 'contact')):
+                        name = text
+                        break
+                if name:
+                    break
+
+        # 3. Last resort: any <a> with reasonable text inside the card
+        if not name:
+            links = card.select('a')
+            for link in links:
+                txt = link.get_text(strip=True)
+                if txt and len(txt) > 4 and ' ' in txt:  # likely a company name
+                    name = txt
+                    break
+
+        data['name'] = name.strip() if name else 'Unknown Agency'
+
+       # WEBSITE — robust multi-pattern extraction
+        website_tag = None
+
+        # 1. Clutch redirect links (most common)
+        patterns = [
+            'a[href*="r.clutch.co/redirect"]',
+            'a[href*="redirect?url="]',
+            'a[href*="redirect?u="]',
+            'a[href*="visit-website"]',
+            'a[href*="goto"]',
+            'a[href^="https://"]:not([href*="/profile/"])'
+        ]
+
+        for p in patterns:
+            website_tag = card.select_one(p)
+            if website_tag:
+                break
+
+        raw_website = website_tag['href'] if website_tag else None
+
+        # 2. Clean redirect URLs
+        if raw_website and "redirect" in raw_website and "u=" in raw_website:
+            try:
+                real = raw_website.split("u=")[-1].split("&")[0]
+                real = real.replace("%3A", ":").replace("%2F", "/")
+                data['website'] = real
+            except:
+                data['website'] = raw_website
+        else:
+            data['website'] = raw_website
+
+        # 3. Remove garbage values
+        if data['website'] and data['website'].strip() in ["https://", "http://", "https://,"]:
+            data['website'] = None
+
+
+        # ────────────────────────────────────────────────────────
+        # LOCATION
+        # ────────────────────────────────────────────────────────
+        loc_tag = card.select_one('.locality, .location, [class*="location"], .city, span[class*="city"]')
         data['location_city'] = loc_tag.get_text(strip=True) if loc_tag else self.countries[country_code]['name']
 
-        # Rating
-        rating_tag = card.select_one('.rating, span.rating, [class*="rating__number"], .stars')
+        # ────────────────────────────────────────────────────────
+        # RATING
+        # ────────────────────────────────────────────────────────
+        rating_tag = card.select_one('[class*="rating"], .stars, span[class*="number"], .rating__number')
         rating_text = rating_tag.get_text(strip=True) if rating_tag else '0'
-        data['clutch_rating'] = float(re.search(r'[\d.]+', rating_text).group()) if re.search(r'[\d.]+', rating_text) else 0.0
+        match = re.search(r'(\d+\.?\d*)', rating_text)
+        data['clutch_rating'] = float(match.group(1)) if match else 0.0
 
-        # Min project size
-        min_proj = card.select_one('[data-tooltip*="Minimum"], .min-project-size, [class*="budget"], .hourly-rate')
+        # ────────────────────────────────────────────────────────
+        # MIN PROJECT SIZE
+        # ────────────────────────────────────────────────────────
+        min_proj = card.select_one('[data-tooltip*="Minimum"], [class*="budget"], [class*="min-project"], .hourly-rate')
         min_text = min_proj.get_text(strip=True).replace(',', '') if min_proj else '$0'
-        match = re.search(r'[\$€£]?(\d+[kK]?\+?)', min_text)
+        match = re.search(r'[\$€£]?(\d+[kKMB]?\+?)', min_text, re.I)
         data['min_project_size_usd'] = self._parse_currency(match.group(1) if match else '0')
 
-        # Employees
-        emp_tag = card.select_one('.employees, [class*="team"], .size, span[class*="employees"]')
-        emp_text = emp_tag.get_text(strip=True) if emp_tag else '10-49'
+        # ────────────────────────────────────────────────────────
+        # EMPLOYEES
+        # ────────────────────────────────────────────────────────
+        emp_tag = card.select_one('span[itemprop="numberOfEmployees"]')
+        if not emp_tag:
+            emp_tag = card.find(string=lambda t: "Employees" in t or "employees" in t)
+        emp_text = (
+            emp_tag.get_text(strip=True) 
+            if hasattr(emp_tag, "get_text")
+            else (emp_tag.strip() if emp_tag else "10-49")
+        )    
         data['employees'] = self._parse_employees(emp_text)
 
-        # Services (tags)
-        service_tags = card.select('a.tag, .service, [class*="service-tag"], .tag-cloud a')
-        data['services'] = [t.get_text(strip=True) for t in service_tags]
-        data['is_wp_specialist'] = any('wordpress' in s.lower() for s in data['services'])
+        # ────────────────────────────────────────────────────────
+        # SERVICES / WP SPECIALIST
+        # ────────────────────────────────────────────────────────
+        potential_tags = card.select('a, span, div, li', recursive=True)
 
-        return data if data['name'] != 'Unknown' else None
+        services_raw = []
+        junk_keywords = ['view profile', 'visit website', 'this provider is available', 'time zone', 'time zones', 'service focus', 'other', '+', 'services provided']
+
+        common_keywords = [
+            'web development', 'mobile app development', 'custom software development', 'ai development',
+            'ux/ui design', 'web design', 'e-commerce development', 'branding', 'search engine optimization',
+            'pay per click', 'digital strategy', 'it staff augmentation', 'low/no code development',
+            'blockchain', 'iot development', 'application testing', 'cloud consulting', 'generative ai'
+        ]
+
+        for el in potential_tags:
+            txt = el.get_text(strip=True)
+            if not txt or len(txt) < 5 or len(txt) > 80:
+                continue
+            txt_lower = txt.lower()
+            if any(j in txt_lower for j in junk_keywords):
+                continue
+            if '%' in txt and any(k in txt_lower for k in common_keywords):
+                services_raw.append(txt)
+            elif any(k in txt_lower for k in common_keywords) and len(txt.split()) <= 6:
+                services_raw.append(txt)
+
+        # Split concatenated items like '35% Web Development65% Mobile App Development'
+        services_split = []
+        for s in services_raw:
+            matches = re.findall(r'(\d+%\s*[^%]+?)(?=\d+%|$)', s)
+            if matches:
+                services_split.extend(m.strip() for m in matches if m.strip())
+            else:
+                services_split.append(s.strip())
+
+        # Step 1: Apply the quick name/junk filter
+        filtered = [s.strip() for s in services_split if '%' in s]
+
+        # Step 2: Deduplicate (case-insensitive), preserve first occurrence order
+        seen = set()
+        services_clean = []
+        for s in filtered:
+            norm = s.lower().strip()
+            if norm and norm not in seen:
+                seen.add(norm)
+                # Still do basic cleanup (safe & cheap)
+                s = s.strip()                     # just in case
+                s = s.rstrip(',.')                # remove trailing comma or period if any
+                services_clean.append(s)
+
+        # Optional: sort highest percentage first
+        def get_percentage(s):
+            try:
+                return float(s.split('%')[0].strip())
+            except:
+                return 0
+
+        services_clean.sort(key=get_percentage, reverse=True)
+
+        data['services'] = services_clean
+
+        # WP specialist detection — only from services
+        wp_keywords = ['wordpress', 'word press', 'wp development', 'wordpress development']
+        data['is_wp_specialist'] = any(
+            any(kw in s.lower() for kw in wp_keywords)
+            for s in data.get('services', [])
+        )
+
+        # Only return if we have at least a name or website
+        if data['name'] == 'Unknown Agency' and not data['website']:
+            return None
+
+        return data
 
     @staticmethod
     def _parse_currency(text):
