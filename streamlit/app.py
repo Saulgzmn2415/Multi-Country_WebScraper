@@ -14,6 +14,11 @@ from datetime import datetime
 import sys
 import os
 
+
+# Temporary - remove after testing
+st.cache_resource.clear()
+
+
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
 
@@ -76,13 +81,51 @@ def load_data():
 # LOAD MODELS
 @st.cache_resource
 def load_models():
-    rf_model = joblib.load('data/models/rf_model.pkl')
+    rf_path = 'data/models/rf_model.pkl'
+    scaler_path = 'data/models/scaler.pkl'
+    
+    rf_model = None
     scaler = None
-    kmeans = None
+    kmeans = None  # you don't save/load kmeans yet, so keep as None
+    
+    try:
+        if not os.path.exists(rf_path):
+            st.error(f"RF model missing: {rf_path}")
+        else:
+            rf_model = joblib.load(rf_path)
+            st.success(f"RF model loaded from {rf_path}")
+        
+        if not os.path.exists(scaler_path):
+            st.error(f"Scaler missing: {scaler_path}")
+        else:
+            scaler = joblib.load(scaler_path)
+            st.success(f"Scaler loaded from {scaler_path}")
+            
+    except Exception as e:
+        st.error(f"Model loading failed: {str(e)}")
+    
     return rf_model, scaler, kmeans
 
 
+# LOAD MODELS
+@st.cache_resource
+def load_models():
+    rf_model = None
+    scaler = None
+    kmeans = None  # still None since you don't save/load it yet
+    
+    try:
+        rf_model = joblib.load('data/models/rf_model.pkl')
+        scaler = joblib.load('data/models/scaler.pkl')
+    except Exception as e:
+        st.error(f"Failed to load ML models: {str(e)}")
+    
+    return rf_model, scaler, kmeans
+
+
+# Load everything
 df, market_sizing = load_data()
+rf_model, scaler, kmeans = load_models()  # ← this calls the function
 
 # 🔧 GLOBAL FIX: Remove duplicate columns
 df = df.loc[:, ~df.columns.duplicated()]
@@ -94,8 +137,6 @@ city_col = next(
 
 df.rename(columns={city_col: "location_city"}, inplace=True)
 city_col = "location_city"
-
-rf_model, scaler, kmeans = load_models()
 
 
 # HEADER

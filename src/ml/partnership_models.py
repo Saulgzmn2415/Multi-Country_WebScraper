@@ -87,16 +87,19 @@ def train_model():
     X = df[features]
     y = df['success']
 
-    # Scale features (very important for clustering and model stability)
+   # Scale features
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Train/test split
+    # Convert to DataFrame so feature names are preserved
+    X_scaled_df = pd.DataFrame(X_scaled, columns=features)
+
+    # Train/test split using the named DataFrame
     X_train, X_test, y_train, y_test = train_test_split(
-        X_scaled, y, test_size=0.2, random_state=42, stratify=y if y.sum() > 0 else None
+        X_scaled_df, y, test_size=0.2, random_state=42, stratify=y if y.sum() > 0 else None
     )
 
-    # Random Forest
+    # Random Forest — fit on DataFrame to store feature_names_in_
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
@@ -134,21 +137,37 @@ class PartnershipMLModels:
     def __init__(self):
         self.rf_model = joblib.load('data/models/rf_model.pkl')
         self.scaler = joblib.load('data/models/scaler.pkl')
-        self.kmeans = None  # you can load or re-fit if needed
+        
+        # Define the exact order of features used during training
+        # This MUST match the order in train_model() → features list
+        self.feature_order = [
+            'employees',
+            'clutch_rating',
+            'revenue_usd',
+            'kaycore_fit_score',
+            'web_pct',
+            'mobile_pct',
+            'custom_pct',
+            'services_wp'
+        ]
 
     def predict_new_partner(self, partner_dict):
+        # Create DataFrame with columns in the exact training order
         df_new = pd.DataFrame([partner_dict])
-        # Assume partner_dict has same features or you fill missing
-        X_new = df_new[self.rf_model.feature_names_in_]  # safer
+        
+        # Reorder columns to match training (and fill missing with 0)
+        X_new = df_new.reindex(columns=self.feature_order, fill_value=0)
+        
+        # Scale using the loaded scaler
         X_scaled = self.scaler.transform(X_new)
 
         success_prob = self.rf_model.predict_proba(X_scaled)[0][1]
-
-        cluster = 0  # placeholder; can add kmeans.predict if you save kmeans
+        predicted_revenue = partner_dict.get('revenue_usd', 0)
+        cluster = 0  # placeholder
 
         return {
             'success_probability': round(float(success_prob), 3),
-            'predicted_revenue_usd': partner_dict.get('revenue_usd', 0),
+            'predicted_revenue_usd': predicted_revenue,
             'cluster': int(cluster)
         }
 
